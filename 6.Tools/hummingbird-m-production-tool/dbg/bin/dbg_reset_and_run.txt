@@ -1,0 +1,3 @@
+target remote:9902
+targetreset
+q

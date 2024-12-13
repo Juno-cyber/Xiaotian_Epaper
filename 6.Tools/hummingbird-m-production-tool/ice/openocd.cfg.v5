@@ -1,0 +1,143 @@
+adapter_nsrst_delay 500
+
+##INTERFACE_REPLACE##
+reset_config srst_only
+source [find dmi.tcl]
+set _create_multi_targets   1
+set _number_of_core   1
+set _CHIPNAME nds_v5
+#jtag newtap $_CHIPNAME cpu -irlen 5 -expected-id 0x10e31913
+jtag newtap $_CHIPNAME cpu -irlen 5 -expected-id 0x1000563D
+
+set NDS_TAP $_CHIPNAME.cpu
+set _TARGETNAME $_CHIPNAME.cpu0
+target create $_TARGETNAME nds_v5 -chain-position $NDS_TAP -coreid 0
+#$_TARGETNAME configure -event examine-end {
+#	global _TARGETNAME
+#	targets $_TARGETNAME
+#	halt
+#  mww 0xf0100044 0x3
+#}
+
+nds_auto_create_multi_targets $NDS_TAP
+
+$_TARGETNAME configure -work-area-phys 0 -work-area-size 0x80000 -work-area-backup 1
+flash bank my_first_flash ndsspi 0x80000000 0 0 0 $_TARGETNAME
+
+#init
+#reset
+#halt
+#flash protect 0 64 last off
+#program ./demo_gpio
+#resume 0x20400000
+
+nds configure tdesc_bit ndsv5_tdesc_bitfield.xml
+#nds configure ena_hit_exception 1
+#nds configure word_access
+nds configure aligned_access
+nds configure reduce_csr
+#nds configure csr_symbolic_name
+nds configure scan_retry_times 3
+nds configure jtag_scans_optimize 4
+nds configure redirect_mem_func
+nds configure jtag_max_scans 64
+nds configure dis_condition_break
+nds configure wip_bytes_per_dot 0x2000
+nds configure dmi_quick_access 1
+#nds configure use_script
+
+#nds reset_memAccSize
+#nds memAccSize 0x00000000 0x80000000 32
+#nds memAccSize 0x80000000 0x100000000 32
+#nds memAccSize 0x00000000 0x800000 32
+
+proc dma_mww {args} {
+	nds mem_access bus
+	eval mww $args
+	nds mem_access cpu
+}
+
+proc dma_mwh {args} {
+	nds mem_access bus
+	eval mwh $args
+	nds mem_access cpu
+}
+
+proc dma_mwb {args} {
+	nds mem_access bus
+	eval mwb $args
+	nds mem_access cpu
+}
+
+proc dma_mdw {args} {
+	nds mem_access bus
+	eval mdw $args
+	nds mem_access cpu
+}
+
+proc dma_mdh {args} {
+	nds mem_access bus
+	eval mdh $args
+	nds mem_access cpu
+}
+
+proc dma_mdb {args} {
+	nds mem_access bus
+	eval mdb $args
+	nds mem_access cpu
+}
+
+proc dma_read_buffer {args} {
+	nds mem_access bus
+	eval nds read_buffer $args
+	nds mem_access cpu
+}
+
+proc dma_write_buffer {args} {
+	nds mem_access bus
+	eval nds write_buffer $args
+	nds mem_access cpu
+}
+
+proc dma_mdb_w {args} {
+	nds mem_access bus
+
+	# get parameters
+	set address [lindex $args 0]
+	set count [lindex $args 1]
+
+	set aligned [expr $address & 0xFFFFFFFC]
+	set offset [expr $address & 0x3]
+	eval mem2array wordarray 32 $aligned 1
+	set answer [expr $wordarray(0) >> ($offset * 8)]
+	set answer [expr $answer & 0xFF]
+	set answer_byte [format %02X $answer]
+	set answer_addr [format %08X $address]
+	puts "0x$answer_addr: $answer_byte"
+
+	nds mem_access cpu
+}
+
+proc dma_mwb_w {args} {
+	nds mem_access bus
+
+	# get parameters
+	set address [lindex $args 0]
+	set data [lindex $args 1]
+
+	set aligned [expr $address & 0xFFFFFFFC]
+	set offset [expr $address & 0x3]
+
+	eval mem2array wordarray 32 $aligned 1
+
+	set mask [expr 0xFF << ($offset * 8)]
+	set mask [expr ~ $mask]
+	set wordarray(0) [expr $wordarray(0) & $mask]
+
+	set data [expr $data << ($offset * 8)]
+	set wordarray(0) [expr $wordarray(0) | $data]
+
+	eval array2mem wordarray 32 $aligned 1
+
+	nds mem_access cpu
+}
