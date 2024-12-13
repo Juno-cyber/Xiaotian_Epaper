@@ -1,0 +1,6 @@
+../Core/Src/freertos.c:131:6:MX_FREERTOS_Init	8	static
+../Core/Src/freertos.c:200:6:task_init	16	static
+../Core/Src/freertos.c:218:6:task_show	16	static
+../Core/Src/freertos.c:236:6:task_run	16	static
+../Core/Src/freertos.c:254:6:task_read	16	static
+../Core/Src/freertos.c:266:6:Callback_ds1302_read	16	static

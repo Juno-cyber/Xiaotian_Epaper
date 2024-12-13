@@ -1,0 +1,8 @@
+../Libraries/mytasks/task_run.c:14:6:run	8	static
+../Libraries/mytasks/task_run.c:24:6:isLeapYear	16	static
+../Libraries/mytasks/task_run.c:32:10:daysInMonth	16	static
+../Libraries/mytasks/task_run.c:46:10:daysFromBase	24	static
+../Libraries/mytasks/task_run.c:59:5:date_diff	40	static
+../Libraries/mytasks/task_run.c:72:6:update_time	4	static
+../Libraries/mytasks/task_run.c:94:6:update_run	40	static
+../Libraries/mytasks/task_run.c:229:6:init_run	16	static

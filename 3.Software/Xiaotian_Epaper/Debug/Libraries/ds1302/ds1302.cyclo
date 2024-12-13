@@ -1,0 +1,10 @@
+../Libraries/ds1302/ds1302.c:5:6:ds1032_DATAOUT_init	1
+../Libraries/ds1302/ds1302.c:19:6:ds1032_DATAINPUT_init	1
+../Libraries/ds1302/ds1302.c:29:6:ds1302_write_onebyte	3
+../Libraries/ds1302/ds1302.c:46:6:ds1302_wirte_rig	1
+../Libraries/ds1302/ds1302.c:62:9:ds1302_read_rig	3
+../Libraries/ds1302/ds1302.c:93:6:ds1032_init	1
+../Libraries/ds1302/ds1302.c:105:6:ds1032_update	1
+../Libraries/ds1302/ds1302.c:118:6:ds1032_read_time	1
+../Libraries/ds1302/ds1302.c:128:6:ds1032_read_realTime	1
+../Libraries/ds1302/ds1302.c:140:9:int_to_bcd	1
