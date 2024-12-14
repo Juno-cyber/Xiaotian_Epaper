@@ -10,6 +10,14 @@
 
 使用软件：cubeide、lceda、solidworks、keyshot
 
+
+
+**<font color='RedOrange'>完整资料：</font>** **已上传**[Xiaotian_Epaper](https://github.com/Juno-cyber/Xiaotian_Epaper)
+
+**<font color='RedOrange'>更新日志：</font>** 
+
+1. 2024.12.13：首次上传，版本v0.0.1
+
 ![keyshot.5](README.assets/keyshot.5.jpg)
 
 ## 文件结构
