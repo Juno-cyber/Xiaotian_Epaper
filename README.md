@@ -103,15 +103,13 @@
 
 <img src="README.assets/硬件信号流.drawio-1734048262367-1.png" alt="硬件信号流.drawio" style="zoom: 50%;" />
 
-
-
 ## 3D设计及安装
 
 xiaotian结构设计如下，pcb固定采用内嵌螺母设计，在**3D打印时需要注意设置一个暂停层**，把螺母放进去再继续打印；
 
 巧妙地外壳和屏幕壳体设计，使用Bambu的0.12mm打印刚好将屏幕壳体嵌入到外壳中，在底部使用两颗平头螺丝固定，表面外壳看不出什么安装的痕迹，对于审美的一点点强迫症，舒适了！
 
-![keyshot.6](README.assets/keyshot.6.jpg)
+<img src="README.assets/keyshot.7.jpg" alt="keyshot.7" style="zoom: 50%;" />
 
 ## 字模压缩
 
