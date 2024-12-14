@@ -42,40 +42,40 @@ $(wildcard ../makefile.init) \
 $(wildcard ../makefile.targets) \
 
 
-BUILD_ARTIFACT_NAME := xiaoshiEpaper
+BUILD_ARTIFACT_NAME := Xiaotian_Epaper
 BUILD_ARTIFACT_EXTENSION := elf
 BUILD_ARTIFACT_PREFIX :=
 BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ARTIFACT_EXTENSION),.$(BUILD_ARTIFACT_EXTENSION),)
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXECUTABLES += \
-xiaoshiEpaper.elf \
+Xiaotian_Epaper.elf \
 
 MAP_FILES += \
-xiaoshiEpaper.map \
+Xiaotian_Epaper.map \
 
 SIZE_OUTPUT += \
 default.size.stdout \
 
 OBJDUMP_LIST += \
-xiaoshiEpaper.list \
+Xiaotian_Epaper.list \
 
 OBJCOPY_HEX += \
-xiaoshiEpaper.hex \
+Xiaotian_Epaper.hex \
 
 OBJCOPY_BIN += \
-xiaoshiEpaper.bin \
+Xiaotian_Epaper.bin \
 
 
 # 所有目标
 all: main-build
 
 # 主构建目标
-main-build: xiaoshiEpaper.elf secondary-outputs
+main-build: Xiaotian_Epaper.elf secondary-outputs
 
 # 工具调用
-xiaoshiEpaper.elf xiaoshiEpaper.map: $(OBJS) $(USER_OBJS) D:\Users\Administrator\STM32CubeIDE\workspace_1.16.1\xiaoshiEpaper\STM32F103CBTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "xiaoshiEpaper.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"D:\Users\Administrator\STM32CubeIDE\workspace_1.16.1\xiaoshiEpaper\STM32F103CBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="xiaoshiEpaper.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Xiaotian_Epaper.elf Xiaotian_Epaper.map: $(OBJS) $(USER_OBJS) D:\Users\Administrator\Documents\GitHub\Xiaotian_Epaper\3.Software\Xiaotian_Epaper\STM32F103CBTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "Xiaotian_Epaper.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"D:\Users\Administrator\Documents\GitHub\Xiaotian_Epaper\3.Software\Xiaotian_Epaper\STM32F103CBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Xiaotian_Epaper.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo '已结束构建目标： $@'
 	@echo ' '
 
@@ -84,24 +84,24 @@ default.size.stdout: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	@echo '已结束构建： $@'
 	@echo ' '
 
-xiaoshiEpaper.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "xiaoshiEpaper.list"
+Xiaotian_Epaper.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "Xiaotian_Epaper.list"
 	@echo '已结束构建： $@'
 	@echo ' '
 
-xiaoshiEpaper.hex: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objcopy  -O ihex $(EXECUTABLES) "xiaoshiEpaper.hex"
+Xiaotian_Epaper.hex: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objcopy  -O ihex $(EXECUTABLES) "Xiaotian_Epaper.hex"
 	@echo '已结束构建： $@'
 	@echo ' '
 
-xiaoshiEpaper.bin: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objcopy  -O binary $(EXECUTABLES) "xiaoshiEpaper.bin"
+Xiaotian_Epaper.bin: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objcopy  -O binary $(EXECUTABLES) "Xiaotian_Epaper.bin"
 	@echo '已结束构建： $@'
 	@echo ' '
 
 # 其他目标
 clean:
-	-$(RM) default.size.stdout xiaoshiEpaper.bin xiaoshiEpaper.elf xiaoshiEpaper.hex xiaoshiEpaper.list xiaoshiEpaper.map
+	-$(RM) Xiaotian_Epaper.bin Xiaotian_Epaper.elf Xiaotian_Epaper.hex Xiaotian_Epaper.list Xiaotian_Epaper.map default.size.stdout
 	-@echo ' '
 
 secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST) $(OBJCOPY_HEX) $(OBJCOPY_BIN)

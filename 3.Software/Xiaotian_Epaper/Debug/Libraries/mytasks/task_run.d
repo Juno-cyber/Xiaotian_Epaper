@@ -1,5 +1,5 @@
 Libraries/mytasks/task_run.o: ../Libraries/mytasks/task_run.c \
- D:/Users/Administrator/STM32CubeIDE/workspace_1.16.1/xiaoshiEpaper/Libraries/include/myfreertos.h \
+ D:/Users/Administrator/Documents/GitHub/Xiaotian_Epaper/3.Software/Xiaotian_Epaper/Libraries/include/myfreertos.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
  ../Core/Inc/FreeRTOSConfig.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h \
@@ -37,10 +37,10 @@ Libraries/mytasks/task_run.o: ../Libraries/mytasks/task_run.c \
  ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h \
- D:/Users/Administrator/STM32CubeIDE/workspace_1.16.1/xiaoshiEpaper/Libraries/include/EPAPER.h \
- D:/Users/Administrator/STM32CubeIDE/workspace_1.16.1/xiaoshiEpaper/Libraries/include/myusart.h \
- D:/Users/Administrator/STM32CubeIDE/workspace_1.16.1/xiaoshiEpaper/Libraries/include/ds1302.h
-D:/Users/Administrator/STM32CubeIDE/workspace_1.16.1/xiaoshiEpaper/Libraries/include/myfreertos.h:
+ D:/Users/Administrator/Documents/GitHub/Xiaotian_Epaper/3.Software/Xiaotian_Epaper/Libraries/include/EPAPER.h \
+ D:/Users/Administrator/Documents/GitHub/Xiaotian_Epaper/3.Software/Xiaotian_Epaper/Libraries/include/myusart.h \
+ D:/Users/Administrator/Documents/GitHub/Xiaotian_Epaper/3.Software/Xiaotian_Epaper/Libraries/include/ds1302.h
+D:/Users/Administrator/Documents/GitHub/Xiaotian_Epaper/3.Software/Xiaotian_Epaper/Libraries/include/myfreertos.h:
 ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h:
 ../Core/Inc/FreeRTOSConfig.h:
 ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h:
@@ -79,6 +79,6 @@ D:/Users/Administrator/STM32CubeIDE/workspace_1.16.1/xiaoshiEpaper/Libraries/inc
 ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h:
 ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h:
 ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h:
-D:/Users/Administrator/STM32CubeIDE/workspace_1.16.1/xiaoshiEpaper/Libraries/include/EPAPER.h:
-D:/Users/Administrator/STM32CubeIDE/workspace_1.16.1/xiaoshiEpaper/Libraries/include/myusart.h:
-D:/Users/Administrator/STM32CubeIDE/workspace_1.16.1/xiaoshiEpaper/Libraries/include/ds1302.h:
+D:/Users/Administrator/Documents/GitHub/Xiaotian_Epaper/3.Software/Xiaotian_Epaper/Libraries/include/EPAPER.h:
+D:/Users/Administrator/Documents/GitHub/Xiaotian_Epaper/3.Software/Xiaotian_Epaper/Libraries/include/myusart.h:
+D:/Users/Administrator/Documents/GitHub/Xiaotian_Epaper/3.Software/Xiaotian_Epaper/Libraries/include/ds1302.h:

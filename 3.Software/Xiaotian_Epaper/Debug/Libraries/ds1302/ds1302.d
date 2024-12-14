@@ -1,5 +1,5 @@
 Libraries/ds1302/ds1302.o: ../Libraries/ds1302/ds1302.c \
- D:/Users/Administrator/STM32CubeIDE/workspace_1.16.1/xiaoshiEpaper/Libraries/include/ds1302.h \
+ D:/Users/Administrator/Documents/GitHub/Xiaotian_Epaper/3.Software/Xiaotian_Epaper/Libraries/include/ds1302.h \
  ../Core/Inc/main.h ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h \
  ../Core/Inc/stm32f1xx_hal_conf.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h \
@@ -25,7 +25,7 @@ Libraries/ds1302/ds1302.o: ../Libraries/ds1302/ds1302.c \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
-D:/Users/Administrator/STM32CubeIDE/workspace_1.16.1/xiaoshiEpaper/Libraries/include/ds1302.h:
+D:/Users/Administrator/Documents/GitHub/Xiaotian_Epaper/3.Software/Xiaotian_Epaper/Libraries/include/ds1302.h:
 ../Core/Inc/main.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:
 ../Core/Inc/stm32f1xx_hal_conf.h:

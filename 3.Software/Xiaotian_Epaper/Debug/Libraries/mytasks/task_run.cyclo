@@ -1,8 +1,8 @@
 ../Libraries/mytasks/task_run.c:14:6:run	1
-../Libraries/mytasks/task_run.c:24:6:isLeapYear	4
-../Libraries/mytasks/task_run.c:32:10:daysInMonth	6
-../Libraries/mytasks/task_run.c:46:10:daysFromBase	4
-../Libraries/mytasks/task_run.c:59:5:date_diff	3
-../Libraries/mytasks/task_run.c:72:6:update_time	1
-../Libraries/mytasks/task_run.c:94:6:update_run	39
-../Libraries/mytasks/task_run.c:229:6:init_run	3
+../Libraries/mytasks/task_run.c:23:6:isLeapYear	4
+../Libraries/mytasks/task_run.c:31:10:daysInMonth	6
+../Libraries/mytasks/task_run.c:45:10:daysFromBase	4
+../Libraries/mytasks/task_run.c:58:5:date_diff	3
+../Libraries/mytasks/task_run.c:71:6:update_time	1
+../Libraries/mytasks/task_run.c:93:6:update_run	39
+../Libraries/mytasks/task_run.c:228:6:init_run	3

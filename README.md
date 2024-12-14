@@ -6,9 +6,9 @@
 
 **一款动动嘴就能交互的极简风桌面摆件！**
 
-组成：墨水屏、stm32、vc02语音模块、实时时钟
+**组成：**墨水屏、stm32、vc02语音模块、实时时钟
 
-使用软件：cubeide、lceda、solidworks、keyshot
+**使用软件：**cubeide1.16.1、lceda专业版、solidworks2023、keyshot10
 
 
 
