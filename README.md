@@ -12,7 +12,7 @@
 
 
 
-**<font color='RedOrange'>完整资料：</font>** **已上传**[Xiaotian_Epaper](https://github.com/Juno-cyber/Xiaotian_Epaper)
+**<font color='RedOrange'>完整资料：</font>** **已上传**[Xiaotian_Epaper](https://github.com/Juno-cyber/Xiaotian_Epaper)，[电路设计](https://oshwhub.com/juno_eda/xiaoshi_epaper)
 
 **<font color='RedOrange'>更新日志：</font>** 
 
