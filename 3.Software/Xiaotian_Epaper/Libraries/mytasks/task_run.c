@@ -107,11 +107,11 @@ void update_run()
 			osEventFlagsSet(Event_02Handle, 1<<0);
 			break;
 		case 4:					//完成浇花了|浇花了|浇水了
-			event_power[2]=Time_now;
+			event_power[3]=Time_now;
 			osEventFlagsSet(Event_02Handle, 1<<0);
 			break;
 		case 5:					//坛子加水了|加水了|泡菜坛子
-			event_power[3]=Time_now;
+			event_power[2]=Time_now;
 			osEventFlagsSet(Event_02Handle, 1<<0);
 			break;
 		case 6:					//海底捞了|吃了海底捞|海底捞
@@ -215,6 +215,7 @@ void update_run()
 		temp_hour=Time_now.hour;
 		temp_minite=Time_now.minute;
 		osEventFlagsSet(Event_02Handle, 1<<0);
+		printf("更新显示！\n");
 	}
 	temp_event = osEventFlagsWait(Event_02Handle, 1<<0, osFlagsWaitAny, 0);	//等待显示事件位
 	if(((temp_event&(1<<0))==(1<<0))&&((int)temp_event>0))
