@@ -29,6 +29,9 @@ void init_show(){
 	EPD_Dis_string(190 + 32, 56, itoa(date_diff(Time_start, Time_now),temp_itoa,10), 16, NEG);
 	EPD_Dis_Part(190, 80, gImage_haidi, 32, 32, NEG);
 	EPD_Dis_string(190 + 32, 88, itoa(date_diff(Time_haidilao, Time_now),temp_itoa,10), 16, NEG);
+	//middle
+	EPD_Dis_Part(90, 0, photo1, 100, 128, POS);
+
 	EPD_Part_Update_and_DeepSleep();
 }
 
@@ -51,7 +54,10 @@ void update_show()
 	EPD_Dis_string(190 + 32, 56, itoa(date_diff(Time_start, Time_now),temp_itoa,10), 16, NEG);
 	EPD_Dis_Part(190, 80, gImage_haidi, 32, 32, NEG);
 	EPD_Dis_string(190 + 32, 88, itoa(date_diff(Time_haidilao, Time_now),temp_itoa,10), 16, NEG);
+	//middle
+	EPD_Dis_Part(90, 0, photo1, 100, 128, POS);
 	EPD_Part_Update_and_DeepSleep();
+
 }
 
 

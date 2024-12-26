@@ -76,6 +76,7 @@ extern const unsigned char gImage_tanzi[128];
 extern const unsigned char gImage_jiaoshui[128];
 extern const unsigned char gImage_dushu[128];
 extern const unsigned char gImage_riji[128];
+extern const unsigned char photo1[1600];
 
 
 #endif

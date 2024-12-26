@@ -2,7 +2,7 @@
 ../Libraries/mytasks/task_run.c:23:6:isLeapYear	16	static
 ../Libraries/mytasks/task_run.c:31:10:daysInMonth	16	static
 ../Libraries/mytasks/task_run.c:45:10:daysFromBase	24	static
-../Libraries/mytasks/task_run.c:58:5:date_diff	40	static
-../Libraries/mytasks/task_run.c:71:6:update_time	4	static
-../Libraries/mytasks/task_run.c:93:6:update_run	40	static
-../Libraries/mytasks/task_run.c:229:6:init_run	16	static
+../Libraries/mytasks/task_run.c:58:5:date_diff	48	static
+../Libraries/mytasks/task_run.c:79:6:update_time	4	static
+../Libraries/mytasks/task_run.c:101:6:update_run	40	static
+../Libraries/mytasks/task_run.c:237:6:init_run	16	static

@@ -1,7 +1,7 @@
 #include "myfreertos.h"
 
 volatile int vc02_msg=0;												//外部输入指令值
-TIMEData Time_start = {2023,6,18,12,0,0,7};					//正向计时事件，恋爱开始时间
+TIMEData Time_start = {2025,1,1,12,0,0,3};					//正向计时事件，恋爱开始时间
 TIMEData Time_haidilao;										//正向计时事件，海底捞冷却时间
 TIMEData event_power[4];									//倒计时事件
 char temp_itoa[6];											//用作数值转字符串的暂存数组
@@ -60,7 +60,15 @@ int date_diff(TIMEData time1,TIMEData time2) {
 	{
 	    int days1 = daysFromBase(time1.year, time1.month, time1.day);
 	    int days2 = daysFromBase(time2.year, time2.month, time2.day);
-	    return abs(days2 - days1);
+	    int temp = days2 - days1;
+	    if (temp>0)
+		{
+	    	return temp;
+		}
+	    else {
+			return 0;
+		}
+
 	}
 	else {
 		return 0;
