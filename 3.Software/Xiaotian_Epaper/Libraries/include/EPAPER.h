@@ -13,6 +13,8 @@
 #define EPD_HEIGHT 128
 
 #define ALLSCREEN_GRAGHBYTES	EPD_WIDTH*EPD_HEIGHT/8
+//#define black_white_red	//使用黑白红墨水屏
+#define black_white			//使用黑白墨水屏
 
 ///////////////////////////GPIO Settings//////////////////////////////////////////////////////
 
@@ -44,17 +46,46 @@ void Epaper_Write_Data(unsigned char data);
 void EPD_HW_Init_4GRAY(void);			//Electronic paper initialization锟斤拷4锟揭阶ｏ拷
 void EPD_HW_Init(void); //Electronic paper initialization
 void EPD_W21_Init(void); //Electronic paper hard reset
-
-void EPD_Update_4GRAY_and_DeepSleep(void);
 void EPD_Update_and_DeepSleep(void);
-void EPD_Part_Update_and_DeepSleep(void); 
-	
+void EPD_Update_4GRAY_and_DeepSleep(void);
+
+
+#ifdef black_white_red
+//可变显示元素显示区域
+#define W_digit 24		//数字的宽*高=24*40
+#define H_digit 40
+#define W_dot 12			//小数点的宽度=12
+//可变显示元素坐标
+#define x_digit_1		  35										//第一位数字的x坐标
+#define y_digit 			56										//数字的y坐标
+//整屏显示区域
+#define EPD_HEIGHT 128
+#define EPD_WIDTH  296
+
+void EPD_WhiteScreen_Red(void);
+void EPD_WhiteScreen_Black(void);
 void EPD_WhiteScreen_White(void);
+void EPD_Update_and_DeepSleep(void);
+void EPD_Part_Update_and_DeepSleep(void);
+void EPD_Update_BaseMap(void);
+
+void EPD_ALL_image(const unsigned char *datas_BW,const unsigned char *datas_RW);
+void EPD_SetRAMValue_BaseMap(const unsigned char *datas_BW,const unsigned char *datas_RED);
+void EPD_multiple_Part(int h_start,int v_start,const unsigned char * digit_1,const unsigned char * digit_2,const unsigned char * digit_3,const unsigned char * digit_4);
+
+#endif
+
+#ifdef black_white
+
+void EPD_SetRAMValue_BaseMap(const unsigned char * datas);
+void EPD_WhiteScreen_White(void);
+void EPD_Part_Update_and_DeepSleep(void);
+#endif
 
 //Display 
 void EPD_WhiteScreen_ALL_4GRAY(const unsigned char *datas);
 void EPD_WhiteScreen_ALL(const unsigned char *datas);
-void EPD_SetRAMValue_BaseMap(const unsigned char * datas);
+
 void EPD_Dis_Part(int h_start,int v_start,const unsigned char * datas,int PART_WIDTH,int PART_HEIGHT,unsigned char mode);
 
 //Display easy
@@ -76,8 +107,12 @@ extern const unsigned char gImage_tanzi[128];
 extern const unsigned char gImage_jiaoshui[128];
 extern const unsigned char gImage_dushu[128];
 extern const unsigned char gImage_riji[128];
-extern const unsigned char photo1[1600];
-
+extern const unsigned char gImage_huoguo[128];
+extern const unsigned char photo1[1760];
+extern const unsigned char photo2[1760];
+extern const unsigned char photo3[2400];
+extern const unsigned char gImage1_xiaowu[4736];
+extern const unsigned char gImage1_white[4736];
 
 #endif
 

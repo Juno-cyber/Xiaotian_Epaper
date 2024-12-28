@@ -1,0 +1,15 @@
+.\Debug\obj\myuart.o: ..\User\myuart.c
+.\Debug\obj\myuart.o: ..\StartUp\stm32f10x.h
+.\Debug\obj\myuart.o: ..\StartUp\core_cm3.h
+.\Debug\obj\myuart.o: e:\Keil\ARM\RV31\INC\stdint.h
+.\Debug\obj\myuart.o: ..\StartUp\system_stm32f10x.h
+.\Debug\obj\myuart.o: ..\StartUp\stm32f10x_conf.h
+.\Debug\obj\myuart.o: ..\FWLib\stm32f10x_flash.h
+.\Debug\obj\myuart.o: ..\StartUp\stm32f10x.h
+.\Debug\obj\myuart.o: ..\FWLib\stm32f10x_gpio.h
+.\Debug\obj\myuart.o: ..\FWLib\stm32f10x_iwdg.h
+.\Debug\obj\myuart.o: ..\FWLib\stm32f10x_rcc.h
+.\Debug\obj\myuart.o: ..\FWLib\stm32f10x_spi.h
+.\Debug\obj\myuart.o: ..\FWLib\stm32f10x_tim.h
+.\Debug\obj\myuart.o: ..\FWLib\stm32f10x_usart.h
+.\Debug\obj\myuart.o: ..\FWLib\misc.h

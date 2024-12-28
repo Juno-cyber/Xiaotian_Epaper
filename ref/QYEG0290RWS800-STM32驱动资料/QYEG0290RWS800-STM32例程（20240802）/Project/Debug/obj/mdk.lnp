@@ -1,0 +1,19 @@
+--cpu Cortex-M3
+".\debug\obj\stm32f10x_gpio.o"
+".\debug\obj\stm32f10x_rcc.o"
+".\debug\obj\stm32f10x_flash.o"
+".\debug\obj\stm32f10x_spi.o"
+".\debug\obj\stm32f10x_usart.o"
+".\debug\obj\stm32f10x_tim.o"
+".\debug\obj\misc.o"
+".\debug\obj\stm32f10x_iwdg.o"
+".\debug\obj\system_stm32f10x.o"
+".\debug\obj\core_cm3.o"
+".\debug\obj\startup_stm32f10x_hd.o"
+".\debug\obj\stm32f10x_it.o"
+".\debug\obj\main.o"
+".\debug\obj\epaper.o"
+--strict --scatter ".\Debug\obj\mdk.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Debug\list\mdk.map" -o .\Debug\obj\mdk.axf

@@ -1,0 +1,1 @@
+-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\FWLib -I..\User -I..\StartUp -I "e:\Keil\ARM\CMSIS\Include" -I "e:\Keil\ARM\INC\ST\STM32F10x" -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD -o ".\Debug\obj\display_epd_w21_spi.o" --omf_browse ".\Debug\obj\display_epd_w21_spi.crf" --depend ".\Debug\obj\display_epd_w21_spi.d" "..\User\Display_EPD_W21_spi.c"

@@ -1,0 +1,115 @@
+### uVision2 Project, (C) Keil Software
+### Do not modify !
+
+Target (mdk), 0x0004 // Tools: 'ARM-ADS'
+
+Group (FwLib)
+Group (StartUp)
+Group (User)
+
+File 1,1,<..\FWLib\stm32f10x_gpio.c><stm32f10x_gpio.c>
+File 1,1,<..\FWLib\stm32f10x_rcc.c><stm32f10x_rcc.c>
+File 1,1,<..\FWLib\stm32f10x_flash.c><stm32f10x_flash.c>
+File 1,1,<..\FWLib\stm32f10x_spi.c><stm32f10x_spi.c>
+File 1,1,<..\FWLib\stm32f10x_usart.c><stm32f10x_usart.c>
+File 1,1,<..\FWLib\stm32f10x_tim.c><stm32f10x_tim.c>
+File 1,1,<..\FWLib\misc.c><misc.c>
+File 1,1,<..\FWLib\stm32f10x_iwdg.c><stm32f10x_iwdg.c>
+File 2,1,<..\StartUp\system_stm32f10x.c><system_stm32f10x.c>
+File 2,1,<..\StartUp\core_cm3.c><core_cm3.c>
+File 2,5,<..\StartUp\stm32f10x_conf.h><stm32f10x_conf.h>
+File 2,2,<..\StartUp\startup_stm32f10x_hd.s><startup_stm32f10x_hd.s>
+File 3,1,<..\User\stm32f10x_it.c><stm32f10x_it.c>
+File 3,1,<..\User\main.c><main.c>
+
+
+Options 1,0,0  // Target 'mdk'
+ Device (STM32F103C8)
+ Vendor (STMicroelectronics)
+ Cpu (IRAM(0x20000000-0x20004FFF) IROM(0x8000000-0x800FFFF) CLOCK(8000000) CPUTYPE("Cortex-M3"))
+ FlashUt ()
+ StupF ("STARTUP\ST\STM32F10x.s" ("STM32 Startup Code"))
+ FlashDR (UL2CM3(-O14 -S0 -C0 -N00("ARM Cortex-M3") -D00(1BA00477) -L00(4) -FO7 -FD20000000 -FC800 -FN1 -FF0STM32F10x_128 -FS08000000 -FL010000))
+ DevID (4235)
+ Rgf (stm32f10x_lib.h)
+ Mem ()
+ C ()
+ A ()
+ RL ()
+ OH ()
+ DBC_IFX ()
+ DBC_CMS ()
+ DBC_AMS ()
+ DBC_LMS ()
+ UseEnv=0
+ EnvBin ()
+ EnvInc ()
+ EnvLib ()
+ EnvReg (ÿST\STM32F10x\)
+ OrgReg (ÿST\STM32F10x\)
+ TgStat=16
+ OutDir (.\Debug\obj\)
+ OutName (mdk)
+ GenApp=1
+ GenLib=0
+ GenHex=1
+ Debug=1
+ Browse=1
+ LstDir (.\Debug\list\)
+ HexSel=1
+ MG32K=0
+ TGMORE=0
+ RunUsr 0 1 <D:\keil\ARM\BIN40\fromelf.exe --bin -o  Debug/obj/T64.bin  Debug/obj/mdk.axf>
+ RunUsr 1 0 <>
+ BrunUsr 0 0 <>
+ BrunUsr 1 0 <>
+ CrunUsr 0 0 <>
+ CrunUsr 1 0 <>
+ SVCSID <>
+ GLFLAGS=1790
+ ADSFLGA { 242,31,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }
+ ACPUTYP ("Cortex-M3")
+ RVDEV ()
+ ADSTFLGA { 0,12,0,2,99,0,0,66,0,0,0,0,0,0,0,0,0,0,0,0 }
+ OCMADSOCM { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }
+ OCMADSIRAM { 0,0,0,0,32,0,80,0,0 }
+ OCMADSIROM { 1,0,0,0,8,0,0,1,0 }
+ OCMADSXRAM { 0,0,0,0,0,0,0,0,0 }
+ OCR_RVCT { 1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,8,0,224,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32,0,80,0,0,0,0,0,0,0,0,0,0,0 }
+ RV_STAVEC ()
+ ADSCCFLG { 5,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }
+ ADSCMISC ()
+ ADSCDEFN (USE_STDPERIPH_DRIVER, STM32F10X_MD)
+ ADSCUDEF ()
+ ADSCINCD (..\FWLib;..\User;..\StartUp)
+ ADSASFLG { 1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }
+ ADSAMISC ()
+ ADSADEFN ()
+ ADSAUDEF ()
+ ADSAINCD ()
+ PropFld { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }
+ IncBld=1
+ AlwaysBuild=0
+ GenAsm=0
+ AsmAsm=0
+ PublicsOnly=0
+ StopCode=3
+ CustArgs ()
+ LibMods ()
+ ADSLDFG { 17,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }
+ ADSLDTA (0x08001000)
+ ADSLDDA (0x20000000)
+ ADSLDSC (.\Debug\obj\mdk.sct)
+ ADSLDIB ()
+ ADSLDIC ()
+ ADSLDMC ()
+ ADSLDIF ()
+ ADSLDDW ()
+  OPTDL (SARMCM3.DLL)()(DARMSTM.DLL)(-pSTM32F103C8)(SARMCM3.DLL)()(TARMSTM.DLL)(-pSTM32F103C8)
+  OPTDBG 180222,9,()()()()()()()()()(..\RunInFlashOffset.ini) (STLink\ST-LINKIII-KEIL.dll)()()()
+ FLASH1 { 9,0,0,0,1,0,0,0,7,16,0,0,0,0,0,0,0,0,0,0 }
+ FLASH2 (STLink\ST-LINKIII-KEIL.dll)
+ FLASH3 ("" ())
+ FLASH4 ()
+EndOpt
+

@@ -1,0 +1,33 @@
+*** Creating Trace Output File '.\Debug\obj\mdk.tra' Ok.
+### Preparing for ADS-LD.
+### Creating ADS-LD Command Line
+### List of Objects: adding '".\debug\obj\stm32f10x_gpio.o"'
+### List of Objects: adding '".\debug\obj\stm32f10x_rcc.o"'
+### List of Objects: adding '".\debug\obj\stm32f10x_flash.o"'
+### List of Objects: adding '".\debug\obj\stm32f10x_spi.o"'
+### List of Objects: adding '".\debug\obj\stm32f10x_usart.o"'
+### List of Objects: adding '".\debug\obj\stm32f10x_tim.o"'
+### List of Objects: adding '".\debug\obj\misc.o"'
+### List of Objects: adding '".\debug\obj\stm32f10x_iwdg.o"'
+### List of Objects: adding '".\debug\obj\system_stm32f10x.o"'
+### List of Objects: adding '".\debug\obj\core_cm3.o"'
+### List of Objects: adding '".\debug\obj\startup_stm32f10x_hd.o"'
+### List of Objects: adding '".\debug\obj\stm32f10x_it.o"'
+### List of Objects: adding '".\debug\obj\main.o"'
+### List of Objects: adding '".\debug\obj\display_epd_w21_aux.o"'
+### List of Objects: adding '".\debug\obj\display_epd_w21.o"'
+### ADS-LD Command completed:
+--cpu Cortex-M3 ".\debug\obj\stm32f10x_gpio.o" ".\debug\obj\stm32f10x_rcc.o" ".\debug\obj\stm32f10x_flash.o" ".\debug\obj\stm32f10x_spi.o" ".\debug\obj\stm32f10x_usart.o" ".\debug\obj\stm32f10x_tim.o" ".\debug\obj\misc.o" ".\debug\obj\stm32f10x_iwdg.o" ".\debug\obj\system_stm32f10x.o" ".\debug\obj\core_cm3.o" ".\debug\obj\startup_stm32f10x_hd.o" ".\debug\obj\stm32f10x_it.o" ".\debug\obj\main.o" ".\debug\obj\display_epd_w21_aux.o" ".\debug\obj\display_epd_w21.o" --strict --scatter ".\Debug\obj\mdk.sct" 
+--autoat --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\Debug\list\mdk.map" -o ".\Debug\obj\mdk.axf"### Preparing Environment (PrepEnvAds)
+### ADS-LD Output File: '.\Debug\obj\mdk.axf'
+### ADS-LD Command File: '.\Debug\obj\mdk.lnp'
+### Checking for dirty Components...
+### Creating CmdFile '.\Debug\obj\mdk.lnp', Handle=0x0000239C
+### Writing '.lnp' file
+### ADS-LD Command file '.\Debug\obj\mdk.lnp' is ready.
+### ADS-LD: About to start ADS-LD Thread.
+### ADS-LD: executed with 0 errors
+### Updating obj list
+### LDADS_file() completed.

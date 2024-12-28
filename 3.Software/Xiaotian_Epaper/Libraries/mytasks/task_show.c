@@ -3,16 +3,32 @@
 void show() {
 	osSemaphoreAcquire(Binary_Sem_1Handle, osWaitForever);
 	printf("time:%d-%d-%d, %d:%d:%d \n",Time_now.year,Time_now.month,Time_now.day,Time_now.hour,Time_now.minute,Time_now.second);
-	HAL_GPIO_WritePin(IO_LED_GPIO_Port, IO_LED_Pin,
-			!HAL_GPIO_ReadPin(IO_LED_GPIO_Port, IO_LED_Pin));	//LED=0 ÁÁ
+//	HAL_GPIO_WritePin(IO_LED_GPIO_Port, IO_LED_Pin,
+//			!HAL_GPIO_ReadPin(IO_LED_GPIO_Port, IO_LED_Pin));	//LED=0 ÁÁ
 	printf("vc02:%d\n",vc02_msg);
 	osDelay(200);
 }
 
 void init_show(){
 	EPD_HW_Init(); 													//Electronic paper initialization
+
+
+//	EPD_ALL_image(gImage1_white,gImage1_xiaowu);	//Refresh the picture in full screen
+
+#ifdef scene1
 	EPD_WhiteScreen_White();
 	EPD_W21_Init();
+	//white
+	EPD_Dis_Part(0, 0, gImage1_white, 296, 128, NEG);
+	//right
+	EPD_Dis_string(186, 0, time, 32, NEG);
+	EPD_Dis_string(200, 32, date, 16, NEG);
+	EPD_Dis_Part(210, 48, gImage_love, 32, 32, POS);
+	EPD_Dis_string(210 + 32, 56, itoa(date_diff(Time_start, Time_now),temp_itoa,10), 16, NEG);
+	EPD_Dis_Part(210, 80, gImage_haidi, 32, 32, NEG);
+	EPD_Dis_string(210 + 32, 88, itoa(date_diff(Time_haidilao, Time_now),temp_itoa,10), 16, NEG);
+	//middle
+	EPD_Dis_Part(85, 0, photo1, 110, 128, POS);
 	//	left
 	EPD_Dis_power(0, 0, (date_diff(event_power[0], Time_now)>4)?0:4-date_diff(event_power[0], Time_now));
 	EPD_Dis_power(0, 32, (date_diff(event_power[1], Time_now)>4)?0:4-date_diff(event_power[1], Time_now));
@@ -22,22 +38,46 @@ void init_show(){
 	EPD_Dis_Part(60, 32, gImage_dushu, 32, 32, POS);
 	EPD_Dis_Part(60, 64, gImage_tanzi, 32, 32, POS);
 	EPD_Dis_Part(60, 96, gImage_jiaoshui, 32, 32, POS);
+#endif
+
+#ifdef scene2
+	EPD_WhiteScreen_Black();
+	EPD_W21_Init();
+	//white
+	EPD_Dis_Part(0, 0, gImage1_white, 296, 128, NEG);
+	//	left
+	EPD_Dis_Part(0, 0, gImage1_xiaowu, 296, 128, POS);
 	//right
-	EPD_Dis_string(175, 0, time, 32, NEG);
-	EPD_Dis_string(190, 32, date, 16, NEG);
+	EPD_Dis_string(166, 0, time, 32, NEG);
+	EPD_Dis_string(180, 32, date, 16, NEG);
 	EPD_Dis_Part(190, 48, gImage_love, 32, 32, POS);
 	EPD_Dis_string(190 + 32, 56, itoa(date_diff(Time_start, Time_now),temp_itoa,10), 16, NEG);
-	EPD_Dis_Part(190, 80, gImage_haidi, 32, 32, NEG);
+	EPD_Dis_Part(190, 80, gImage_huoguo, 32, 32, POS);
 	EPD_Dis_string(190 + 32, 88, itoa(date_diff(Time_haidilao, Time_now),temp_itoa,10), 16, NEG);
-	//middle
-	EPD_Dis_Part(90, 0, photo1, 100, 128, POS);
 
+
+#endif
+
+//
 	EPD_Part_Update_and_DeepSleep();
 }
 
 void update_show()
 {
 	EPD_W21_Init();
+
+#ifdef scene1
+	//white
+	EPD_Dis_Part(0, 0, gImage1_white, 296, 128, NEG);
+	//right
+	EPD_Dis_string(186, 0, time, 32, NEG);
+	EPD_Dis_string(200, 32, date, 16, NEG);
+	EPD_Dis_Part(210, 48, gImage_love, 32, 32, POS);
+	EPD_Dis_string(210 + 32, 56, itoa(date_diff(Time_start, Time_now),temp_itoa,10), 16, NEG);
+	EPD_Dis_Part(210, 80, gImage_haidi, 32, 32, NEG);
+	EPD_Dis_string(210 + 32, 88, itoa(date_diff(Time_haidilao, Time_now),temp_itoa,10), 16, NEG);
+	//middle
+	EPD_Dis_Part(85, 0, photo1, 110, 128, POS);
 	//	left
 	EPD_Dis_power(0, 0, (date_diff(event_power[0], Time_now)>4)?0:4-date_diff(event_power[0], Time_now));
 	EPD_Dis_power(0, 32, (date_diff(event_power[1], Time_now)>4)?0:4-date_diff(event_power[1], Time_now));
@@ -47,17 +87,23 @@ void update_show()
 	EPD_Dis_Part(60, 32, gImage_dushu, 32, 32, POS);
 	EPD_Dis_Part(60, 64, gImage_tanzi, 32, 32, POS);
 	EPD_Dis_Part(60, 96, gImage_jiaoshui, 32, 32, POS);
+#endif
+
+#ifdef scene2
+	//white
+	EPD_Dis_Part(0, 0, gImage1_white, 296, 128, NEG);
+	//	left
+	EPD_Dis_Part(0, 0, gImage1_xiaowu, 296, 128, POS);
 	//right
-	EPD_Dis_string(175, 0, time, 32, NEG);
-	EPD_Dis_string(190, 32, date, 16, NEG);
+	EPD_Dis_string(166, 0, time, 32, NEG);
+	EPD_Dis_string(180, 32, date, 16, NEG);
 	EPD_Dis_Part(190, 48, gImage_love, 32, 32, POS);
 	EPD_Dis_string(190 + 32, 56, itoa(date_diff(Time_start, Time_now),temp_itoa,10), 16, NEG);
-	EPD_Dis_Part(190, 80, gImage_haidi, 32, 32, NEG);
+	EPD_Dis_Part(190, 80, gImage_huoguo, 32, 32, POS);
 	EPD_Dis_string(190 + 32, 88, itoa(date_diff(Time_haidilao, Time_now),temp_itoa,10), 16, NEG);
-	//middle
-	EPD_Dis_Part(90, 0, photo1, 100, 128, POS);
-	EPD_Part_Update_and_DeepSleep();
+#endif
 
+	EPD_Part_Update_and_DeepSleep();
 }
 
 

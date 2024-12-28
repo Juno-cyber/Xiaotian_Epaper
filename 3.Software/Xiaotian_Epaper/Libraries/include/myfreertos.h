@@ -12,6 +12,8 @@
 #include "ds1302.h"
 
 #define RTX_BUFFER_SIZE 1
+#define scene1						//定义显示场景1
+//#define scene2						//定义显示场景2
 typedef enum { false, true } bool; // 自定义bool类型和常量
 
 //显示任务

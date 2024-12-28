@@ -16,11 +16,14 @@
 
 **<font color='RedOrange'>更新日志：</font>** 
 
+1. 2024.12.28：添加黑白红墨水屏供选择，版本v0.0.2
 1. 2024.12.13：首次上传，版本v0.0.1
 
-![keyshot.5](README.assets/keyshot.5.jpg)
+![xiaotian2](README.assets/xiaotian2.jpg)
 
-## 文件结构
+![xiaotian1](README.assets/xiaotian1.jpg)
+
+![xiaotian3](README.assets/xiaotian3.jpg)
 
 | 序号 | 文件名       | 描述          |
 | ---- | ------------ | ------------- |
