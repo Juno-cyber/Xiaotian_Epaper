@@ -93,8 +93,8 @@ uint8_t ds1302_read_rig(uint8_t address) //从指定地址读取一字节数据
 void ds1032_init() {
 	ds1302_wirte_rig(0x8e, 0x00); //关闭写保护
 	ds1302_wirte_rig(0x80, 0x00); //seconds37秒
-	ds1302_wirte_rig(0x82, 0x14); //minutes44分
-	ds1302_wirte_rig(0x84, 0x09); //hours9时
+	ds1302_wirte_rig(0x82, 0x26); //minutes44分
+	ds1302_wirte_rig(0x84, 0x14); //hours9时
 	ds1302_wirte_rig(0x86, 0x05); //date30日
 	ds1302_wirte_rig(0x88, 0x01); //months11月
 	ds1302_wirte_rig(0x8a, 0x07); //days星期六

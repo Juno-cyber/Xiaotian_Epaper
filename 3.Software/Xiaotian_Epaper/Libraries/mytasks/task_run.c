@@ -222,6 +222,7 @@ void update_run()
 		temp_day=Time_now.day;
 		temp_hour=Time_now.hour;
 		temp_minite=Time_now.minute;
+		temp_time = Time_now;
 		osEventFlagsSet(Event_02Handle, 1<<0);
 		printf("¸üÐÂÏÔÊ¾£¡\n");
 	}
