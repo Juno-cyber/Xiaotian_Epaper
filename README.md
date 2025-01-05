@@ -8,14 +8,15 @@
 
 **组成：** 墨水屏、stm32、vc02语音模块、实时时钟
 
-**使用软件：** cubeide1.16.1、lceda专业版、solidworks2024、keyshot10
+**使用软件：** cubeide1.16.1、lceda专业版、solidworks2024、keyshot13
 
 
 
-**<font color='RedOrange'>完整资料：</font>** **已上传**[Xiaotian_Epaper](https://github.com/Juno-cyber/Xiaotian_Epaper)，[电路设计](https://oshwhub.com/juno_eda/xiaoshi_epaper)
+**<font color='RedOrange'>完整资料：</font>** **已上传**github-[Xiaotian_Epaper](https://github.com/Juno-cyber/Xiaotian_Epaper)，oshwhub-[电路设计](https://oshwhub.com/juno_eda/xiaoshi_epaper)
 
 **<font color='RedOrange'>更新日志：</font>** 
 
+1. 2025.1.5：添加pcb焊接建议，bom表中增加了我使用的下载器购买链接
 1. 2024.12.28：添加黑白红墨水屏供选择，版本v0.0.2
 1. 2024.12.13：首次上传，版本v0.0.1
 
@@ -110,9 +111,23 @@
 
 xiaotian结构设计如下，pcb固定采用内嵌螺母设计，在**3D打印时需要注意设置一个暂停层**，把螺母放进去再继续打印；
 
+![c2bb30850b835eb2fdd84d474845cc9](README.assets/c2bb30850b835eb2fdd84d474845cc9.jpg)
+
 巧妙地外壳和屏幕壳体设计，使用Bambu的0.12mm打印刚好将屏幕壳体嵌入到外壳中，在底部使用两颗平头螺丝固定，表面外壳看不出什么安装的痕迹，对于审美的一点点强迫症，舒适了！
 
 <img src="README.assets/keyshot.7.jpg" alt="keyshot.7" style="zoom: 50%;" />
+
+## PCB焊接建议
+
+电容电阻使用的0603封装，需要用到**加热台**和**烙铁**，焊接不当需要拆除的话也需要用到**热风枪**，这里给一些手工焊接的建议，如果采用SMT焊接可以不用看
+
+1. 手工焊接建议开钢网，当然想纯白嫖也可以不开，我没开也焊接成功了，就是难度稍微高一点
+2. 首先用加热台焊接元器件最多的一面，但**注意不要一开始就把引脚密集的typeC和stm32主控芯片贴上去**，因为引脚过于密集，但凡锡膏多加一点就会短接，后续用烙铁不好分开，有的同学可能说用助焊剂容易分开，但我以前用的时候发现**助焊剂加热时间久了会导电短路**，有点恐怖。我实际发现比较好的方法是在加热台上等锡膏都融化了，用镊子把粘连的锡抚顺了，然后再放上typeC和stm32主控，成功率提高很多！
+3. 焊接好了可以先连接typeC测试串口，能检测到串口一般说明最难的主控和typeC焊接没什么问题，有问题的话先检查用的线是不是只能充电没有信号线，确定是焊接问题，就需要用热风枪吹热拆下来然后再焊接了
+
+**焊接成品如下**，手工抹的锡膏，表面会有一些锡球不那么美观。
+
+![b16dd6a19d504836f2a4427307bea4e](README.assets/b16dd6a19d504836f2a4427307bea4e.jpg)
 
 ## 字模压缩
 
@@ -165,3 +180,7 @@ xiaotian结构设计如下，pcb固定采用内嵌螺母设计，在**3D打印�
 工具路径：`xiaotian_Epaper\6.Tools\hummingbird-m-production-tool\UniOneDownloadTool.exe`
 
 固件路径：`xiaotian_Epaper\2.Firmware\uni_app_release.bin`
+
+## 最后
+
+难度不是很高的一个项目，想锻炼一下贴片焊接、学习stm32设计开发、freeRTOS的同学都可以来试试，我会持续完善更新，期待大家交作业！
