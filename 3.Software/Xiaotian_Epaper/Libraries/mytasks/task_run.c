@@ -1,7 +1,7 @@
 #include "myfreertos.h"
 
 volatile int vc02_msg=0;												//外部输入指令值
-TIMEData Time_start = {2025,1,1,12,0,0,3};					//正向计时事件，恋爱开始时间
+TIMEData Time_start = {2023,6,18,12,0,0,7};					//正向计时事件，恋爱开始时间
 TIMEData Time_haidilao;										//正向计时事件，海底捞冷却时间
 TIMEData event_power[4];									//倒计时事件
 char temp_itoa[6];											//用作数值转字符串的暂存数组

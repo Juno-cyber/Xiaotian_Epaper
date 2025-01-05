@@ -10138,8 +10138,8 @@ uint8_t ds1302_read_rig(uint8_t address) //从指定地址读取一字节数据
  8003f24:	40010c00 	.word	0x40010c00
 
 08003f28 <ds1032_update>:
-	ds1302_wirte_rig(0x8a, 0x03); //days星期六
-	ds1302_wirte_rig(0x8c, 0x24); //year2024年
+	ds1302_wirte_rig(0x8a, 0x07); //days星期六
+	ds1302_wirte_rig(0x8c, 0x25); //year2024年
 	ds1302_wirte_rig(0x8e, 0x80); //关闭写保护
 }
 
