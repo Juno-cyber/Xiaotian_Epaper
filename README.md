@@ -16,6 +16,7 @@
 
 **<font color='RedOrange'>更新日志：</font>** 
 
+1. 2025.1.18：更新bom表中黑白红墨水屏器件链接，更新程序，添加二次开发教程
 1. 2025.1.5：添加pcb焊接建议，bom表中增加了我使用的下载器购买链接
 1. 2024.12.28：添加黑白红墨水屏供选择，版本v0.0.2
 1. 2024.12.13：首次上传，版本v0.0.1
@@ -128,6 +129,105 @@ xiaotian结构设计如下，pcb固定采用内嵌螺母设计，在**3D打印�
 **焊接成品如下**，手工抹的锡膏，表面会有一些锡球不那么美观。
 
 ![b16dd6a19d504836f2a4427307bea4e](README.assets/b16dd6a19d504836f2a4427307bea4e.jpg)
+
+## 二次开发教程
+
+### 不同墨水屏选择
+
+文件路径：`"Xiaotian_Epaper\3.Software\Xiaotian_Epaper\Libraries\include\EPAPER.h"`
+
+```c
+//选择屏幕类型，共适配了两种类型的显示屏，bom表中有列出链接，可以根据自己选择来做选择
+#define black_white_red	//使用黑白红墨水屏
+//#define black_white			//使用黑白墨水屏
+```
+
+### 自己创建新的场景（以主图为例）
+
+1.定义场景名称，路径：`"Xiaotian_Epaper\3.Software\Xiaotian_Epaper\Libraries\include\myfreertos.h"`
+
+```c
+// 可以参考定义自己的场景
+#define scene1						//显示场景1
+//#define scene2						//显示场景2
+```
+
+2.在**init_show()**函数中初始化场景，路径`"Xiaotian_Epaper\3.Software\Xiaotian_Epaper\Libraries\mytasks\task_show.c"`
+
+```
+void init_show(){
+
+	//****
+	
+#ifdef scene1
+#ifdef black_white_red
+	EPD_WhiteScreen_Black();
+#else
+	EPD_WhiteScreen_White();
+#endif
+	EPD_W21_Init();
+	//white
+	EPD_Dis_Part(0, 0, gImage1_white, 296, 128, NEG);
+	//right
+	EPD_Dis_string(186, 0, time, 32, NEG);
+	EPD_Dis_string(200, 32, date, 16, NEG);
+	EPD_Dis_Part(210, 48, gImage_love, 32, 32, POS);
+	EPD_Dis_string(210 + 32, 56, itoa(date_diff(Time_start, Time_now),temp_itoa,10), 16, NEG);
+	EPD_Dis_Part(210, 80, gImage_haidi, 32, 32, NEG);
+	EPD_Dis_string(210 + 32, 88, itoa(date_diff(Time_haidilao, Time_now),temp_itoa,10), 16, NEG);
+	//middle
+	EPD_Dis_Part(85, 0, photo1, 110, 128, POS);
+	//	left
+	EPD_Dis_power(0, 0, (date_diff(event_power[0], Time_now)>4)?0:4-date_diff(event_power[0], Time_now));
+	EPD_Dis_power(0, 32, (date_diff(event_power[1], Time_now)>4)?0:4-date_diff(event_power[1], Time_now));
+	EPD_Dis_power(0, 64, (date_diff(event_power[2], Time_now)>4)?0:4-date_diff(event_power[2], Time_now));
+	EPD_Dis_power(0, 96, (date_diff(event_power[3], Time_now)>4)?0:4-date_diff(event_power[3], Time_now));
+	EPD_Dis_Part(60, 0, gImage_riji, 32, 32, NEG);
+	EPD_Dis_Part(60, 32, gImage_dushu, 32, 32, POS);
+	EPD_Dis_Part(60, 64, gImage_tanzi, 32, 32, POS);
+	EPD_Dis_Part(60, 96, gImage_jiaoshui, 32, 32, POS);
+#endif
+
+	//****
+
+}
+```
+
+3.在**update_show**()函数中定义更新逻辑，路径`"Xiaotian_Epaper\3.Software\Xiaotian_Epaper\Libraries\mytasks\task_show.c"`
+
+```c
+void update_show()
+{
+    
+	//****
+	
+#ifdef scene1
+	//white
+	EPD_Dis_Part(0, 0, gImage1_white, 296, 128, NEG);
+	//right
+	EPD_Dis_string(186, 0, time, 32, NEG);
+	EPD_Dis_string(200, 32, date, 16, NEG);
+	EPD_Dis_Part(210, 48, gImage_love, 32, 32, POS);
+	EPD_Dis_string(210 + 32, 56, itoa(date_diff(Time_start, Time_now),temp_itoa,10), 16, NEG);
+	EPD_Dis_Part(210, 80, gImage_haidi, 32, 32, NEG);
+	EPD_Dis_string(210 + 32, 88, itoa(date_diff(Time_haidilao, Time_now),temp_itoa,10), 16, NEG);
+	//middle
+	EPD_Dis_Part(85, 0, photo1, 110, 128, POS);
+	//	left
+	EPD_Dis_power(0, 0, (date_diff(event_power[0], Time_now)>4)?0:4-date_diff(event_power[0], Time_now));
+	EPD_Dis_power(0, 32, (date_diff(event_power[1], Time_now)>4)?0:4-date_diff(event_power[1], Time_now));
+	EPD_Dis_power(0, 64, (date_diff(event_power[2], Time_now)>4)?0:4-date_diff(event_power[2], Time_now));
+	EPD_Dis_power(0, 96, (date_diff(event_power[3], Time_now)>4)?0:4-date_diff(event_power[3], Time_now));
+	EPD_Dis_Part(60, 0, gImage_riji, 32, 32, NEG);
+	EPD_Dis_Part(60, 32, gImage_dushu, 32, 32, POS);
+	EPD_Dis_Part(60, 64, gImage_tanzi, 32, 32, POS);
+	EPD_Dis_Part(60, 96, gImage_jiaoshui, 32, 32, POS);
+#endif
+
+	//****
+
+}
+```
 
 ## 字模压缩
 
