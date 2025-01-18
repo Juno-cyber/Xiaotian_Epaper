@@ -13,8 +13,9 @@
 #define EPD_HEIGHT 128
 
 #define ALLSCREEN_GRAGHBYTES	EPD_WIDTH*EPD_HEIGHT/8
-//#define black_white_red	//使用黑白红墨水屏
-#define black_white			//使用黑白墨水屏
+//选择屏幕类型，共适配了两种类型的显示屏，bom表中有列出链接，可以根据自己选择来做选择
+#define black_white_red	//使用黑白红墨水屏
+//#define black_white			//使用黑白墨水屏
 
 ///////////////////////////GPIO Settings//////////////////////////////////////////////////////
 

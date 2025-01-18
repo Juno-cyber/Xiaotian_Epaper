@@ -16,7 +16,12 @@ void init_show(){
 //	EPD_ALL_image(gImage1_white,gImage1_xiaowu);	//Refresh the picture in full screen
 
 #ifdef scene1
+#ifdef black_white_red
+	EPD_WhiteScreen_Black();
+#else
 	EPD_WhiteScreen_White();
+#endif
+
 	EPD_W21_Init();
 	//white
 	EPD_Dis_Part(0, 0, gImage1_white, 296, 128, NEG);
@@ -41,7 +46,11 @@ void init_show(){
 #endif
 
 #ifdef scene2
+#ifdef black_white_red
 	EPD_WhiteScreen_Black();
+#else
+	EPD_WhiteScreen_White();
+#endif
 	EPD_W21_Init();
 	//white
 	EPD_Dis_Part(0, 0, gImage1_white, 296, 128, NEG);
