@@ -4,6 +4,7 @@
 #include "main.h"
 #include <stdio.h>
 
+
 #define CE_L HAL_GPIO_WritePin(DS1302_CE_GPIO_Port,DS1302_CE_Pin,0)
 #define CE_H HAL_GPIO_WritePin(DS1302_CE_GPIO_Port,DS1302_CE_Pin,1)
 #define SCLK_L HAL_GPIO_WritePin(DS1302_SCL_GPIO_Port,DS1302_SCL_Pin,0)
