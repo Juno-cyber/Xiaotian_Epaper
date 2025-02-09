@@ -195,6 +195,10 @@ void init_show(){
 
 3.在**update_show**()函数中定义更新逻辑，路径`"Xiaotian_Epaper\3.Software\Xiaotian_Epaper\Libraries\mytasks\task_show.c"`
 
+图片数组在`"Xiaotian_Epaper\3.Software\Xiaotian_Epaper\Libraries\EPD_W21\EPAPER.c"`中定义，在`"Xiaotian_Epaper\3.Software\Xiaotian_Epaper\Libraries\include\EPAPER.h"`中使用`extern`命令进行外部声明，可参考现有图片数组更改
+
+**注：图片数组取模具体操作参考后文中工具使用部分**
+
 ```c
 void update_show()
 {
@@ -228,6 +232,30 @@ void update_show()
 
 }
 ```
+
+## 工具使用
+
+**使用取模软件制作图片数组**
+
+首先了解2.9寸墨水屏显示尺寸为296*128，x方向可按1像素平移，**而y方向只能按8像素平移**（例如设置y=0，实际y=0；设置y=1~7，实际y=7）。以封面为例，主图大小为100x128px，所有小图标为32x32px，二次开发可参考该大小进行布局
+
+![显示布局图](README.assets/显示布局图.png)
+
+取模工具路径：`xiaotian_Epaper\6.Tools\CharacterMatrix 3.0.2.3.exe`
+
+由于厂家给的墨水屏demo是按照x方向排列的，现在需要以y方向排列，因此需要按照以下步骤对图片进行**镜像和旋转**
+
+![图片取模](README.assets/图片取模.png)
+
+得到字模二进制数据后拷贝到文件对应位置即可
+
+![图片取模2](README.assets/图片取模2.png)
+
+**vc02烧录工具**：[教程参考](https://blog.csdn.net/Boantong_/article/details/123846788)
+
+工具路径：`xiaotian_Epaper\6.Tools\hummingbird-m-production-tool\UniOneDownloadTool.exe`
+
+固件路径：`xiaotian_Epaper\2.Firmware\uni_app_release.bin`
 
 ## 字模压缩
 
@@ -268,18 +296,6 @@ void update_show()
 ,(?![^,]*,)			选中所有行最后一个逗号
 \n{2}				选中连续的两个换行符
 ```
-
-## 工具使用
-
-**取模软件**
-
-工具路径：`xiaotian_Epaper\6.Tools\CharacterMatrix 3.0.2.3.exe`
-
-**vc02烧录工具**：[教程参考](https://blog.csdn.net/Boantong_/article/details/123846788)
-
-工具路径：`xiaotian_Epaper\6.Tools\hummingbird-m-production-tool\UniOneDownloadTool.exe`
-
-固件路径：`xiaotian_Epaper\2.Firmware\uni_app_release.bin`
 
 ## 最后
 
