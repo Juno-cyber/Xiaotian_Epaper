@@ -100,7 +100,7 @@ void ds1032_init() {
     int hour, min, sec;
     parse_time(COMPILE_TIME, &hour, &min, &sec);
 
-    if(Time_now.year!=year||Time_now.minute!=min){
+    if(Time_now.year==2000||Time_now.minute==0){
     	//更新Time_now
     	Time_now.second = sec;
     	Time_now.minute = min;
@@ -119,6 +119,7 @@ void ds1032_init() {
 
         // 初始化DS1302
         ds1302_wirte_rig(0x8e, 0x00);  // 关闭写保护
+
 
         ds1302_wirte_rig(0x80, bcd_sec);    // 秒
         ds1302_wirte_rig(0x82, bcd_min);    // 分

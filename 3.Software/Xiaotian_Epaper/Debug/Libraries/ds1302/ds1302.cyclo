@@ -4,10 +4,10 @@
 ../Libraries/ds1302/ds1302.c:46:6:ds1302_wirte_rig	1
 ../Libraries/ds1302/ds1302.c:62:9:ds1302_read_rig	3
 ../Libraries/ds1302/ds1302.c:93:6:ds1032_init	3
-../Libraries/ds1302/ds1302.c:136:6:ds1032_update	1
-../Libraries/ds1302/ds1302.c:149:6:ds1032_read_time	1
-../Libraries/ds1302/ds1302.c:159:6:ds1032_read_realTime	1
-../Libraries/ds1302/ds1302.c:171:9:int_to_bcd	1
-../Libraries/ds1302/ds1302.c:181:9:month_str_to_num	3
-../Libraries/ds1302/ds1302.c:193:6:parse_date	1
-../Libraries/ds1302/ds1302.c:211:6:parse_time	1
+../Libraries/ds1302/ds1302.c:137:6:ds1032_update	1
+../Libraries/ds1302/ds1302.c:150:6:ds1032_read_time	1
+../Libraries/ds1302/ds1302.c:160:6:ds1032_read_realTime	1
+../Libraries/ds1302/ds1302.c:172:9:int_to_bcd	1
+../Libraries/ds1302/ds1302.c:182:9:month_str_to_num	3
+../Libraries/ds1302/ds1302.c:194:6:parse_date	1
+../Libraries/ds1302/ds1302.c:212:6:parse_time	1
