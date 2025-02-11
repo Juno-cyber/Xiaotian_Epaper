@@ -91,15 +91,46 @@ uint8_t ds1302_read_rig(uint8_t address) //从指定地址读取一字节数据
 }
 
 void ds1032_init() {
-	ds1302_wirte_rig(0x8e, 0x00); //关闭写保护
-	ds1302_wirte_rig(0x80, 0x00); //seconds37秒
-	ds1302_wirte_rig(0x82, 0x26); //minutes44分
-	ds1302_wirte_rig(0x84, 0x14); //hours9时
-	ds1302_wirte_rig(0x86, 0x05); //date30日
-	ds1302_wirte_rig(0x88, 0x01); //months11月
-	ds1302_wirte_rig(0x8a, 0x07); //days星期六
-	ds1302_wirte_rig(0x8c, 0x25); //year2024年
-	ds1302_wirte_rig(0x8e, 0x80); //关闭写保护
+
+    // 解析日期
+    int day, month, year;
+    parse_date(COMPILE_DATE, &day, &month, &year);
+
+    // 解析时间
+    int hour, min, sec;
+    parse_time(COMPILE_TIME, &hour, &min, &sec);
+
+    if(Time_now.year!=year||Time_now.minute!=min){
+    	//更新Time_now
+    	Time_now.second = sec;
+    	Time_now.minute = min;
+    	Time_now.hour = hour;
+    	Time_now.day = day;
+    	Time_now.month = month;
+    	Time_now.week = 7;
+    	Time_now.year = year;
+        // 转换数据格式
+        uint8_t bcd_sec = int_to_bcd(sec);
+        uint8_t bcd_min = int_to_bcd(min);
+        uint8_t bcd_hour = int_to_bcd(hour);
+        uint8_t bcd_day = int_to_bcd(day);
+        uint8_t bcd_month = int_to_bcd(month);
+        uint8_t bcd_year = int_to_bcd(year % 100); // 取年份后两位
+
+        // 初始化DS1302
+        ds1302_wirte_rig(0x8e, 0x00);  // 关闭写保护
+
+        ds1302_wirte_rig(0x80, bcd_sec);    // 秒
+        ds1302_wirte_rig(0x82, bcd_min);    // 分
+        ds1302_wirte_rig(0x84, bcd_hour);   // 时（24小时制）
+        ds1302_wirte_rig(0x86, bcd_day);    // 日
+        ds1302_wirte_rig(0x88, bcd_month);  // 月
+        ds1302_wirte_rig(0x8a, 0x07);       // 星期（需额外填入，这里使用日）
+        ds1302_wirte_rig(0x8c, bcd_year);   // 年
+
+        ds1302_wirte_rig(0x8e, 0x80);  // 启用写保护
+    }
+
 }
 
 void ds1032_update(TIMEData time) {
@@ -146,3 +177,39 @@ uint8_t int_to_bcd(int num) {
     return bcd;
 }
 
+// 月份字符串转数字的辅助函数
+uint8_t month_str_to_num(const char* month) {
+    const char* months[] = {"Jan","Feb","Mar","Apr","May","Jun",
+                            "Jul","Aug","Sep","Oct","Nov","Dec"};
+    for (int i = 0; i < 12; i++) {
+        if (strncmp(month, months[i], 3) == 0) {
+            return i + 1; // 月份从1开始
+        }
+    }
+    return 1; // 默认1月
+}
+
+// 从日期字符串中提取日、月、年
+void parse_date(const char* date_str, int* day, int* month, int* year) {
+    char month_str[4];
+    // 提取月份
+    month_str[0] = date_str[0];
+    month_str[1] = date_str[1];
+    month_str[2] = date_str[2];
+    month_str[3] = '\0';
+    *month = month_str_to_num(month_str);
+
+    // 提取日
+    *day = (date_str[4] - '0') * 10 + (date_str[5] - '0');
+
+    // 提取年
+    *year = (date_str[7] - '0') * 1000 + (date_str[8] - '0') * 100 +
+            (date_str[9] - '0') * 10 + (date_str[10] - '0');
+}
+
+// 从时间字符串中提取时、分、秒
+void parse_time(const char* time_str, int* hour, int* min, int* sec) {
+    *hour = (time_str[0] - '0') * 10 + (time_str[1] - '0');
+    *min  = (time_str[3] - '0') * 10 + (time_str[4] - '0');
+    *sec  = (time_str[6] - '0') * 10 + (time_str[7] - '0');
+}

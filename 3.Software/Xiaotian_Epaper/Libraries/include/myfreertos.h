@@ -16,10 +16,6 @@
 #define scene1						//显示场景1
 //#define scene2						//显示场景2
 
-// 使用编译时的宏 __DATE__ 和 __TIME__ 提取编译时间
-#define COMPILE_DATE __DATE__
-#define COMPILE_TIME __TIME__
-
 typedef enum { false, true } bool; // 自定义bool类型和常量
 
 //显示任务

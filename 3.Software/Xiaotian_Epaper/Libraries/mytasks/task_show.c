@@ -7,6 +7,7 @@ void show() {
 //			!HAL_GPIO_ReadPin(IO_LED_GPIO_Port, IO_LED_Pin));	//LED=0 ¡¡
 	printf("vc02:%d\n",vc02_msg);
     printf("COMPILE_DATE:%s ,COMPILE_TIME:%s \n",COMPILE_DATE,COMPILE_TIME);
+
 	osDelay(200);
 }
 

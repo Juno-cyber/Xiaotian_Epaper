@@ -3,8 +3,11 @@
 ../Libraries/ds1302/ds1302.c:29:6:ds1302_write_onebyte	24	static
 ../Libraries/ds1302/ds1302.c:46:6:ds1302_wirte_rig	24	static
 ../Libraries/ds1302/ds1302.c:62:9:ds1302_read_rig	24	static
-../Libraries/ds1302/ds1302.c:93:6:ds1032_init	8	static
-../Libraries/ds1302/ds1302.c:105:6:ds1032_update	16	static
-../Libraries/ds1302/ds1302.c:118:6:ds1032_read_time	8	static
-../Libraries/ds1302/ds1302.c:128:6:ds1032_read_realTime	8	static
-../Libraries/ds1302/ds1302.c:140:9:int_to_bcd	24	static
+../Libraries/ds1302/ds1302.c:93:6:ds1032_init	40	static
+../Libraries/ds1302/ds1302.c:136:6:ds1032_update	16	static
+../Libraries/ds1302/ds1302.c:149:6:ds1032_read_time	8	static
+../Libraries/ds1302/ds1302.c:159:6:ds1032_read_realTime	8	static
+../Libraries/ds1302/ds1302.c:171:9:int_to_bcd	24	static
+../Libraries/ds1302/ds1302.c:181:9:month_str_to_num	80	static
+../Libraries/ds1302/ds1302.c:193:6:parse_date	32	static
+../Libraries/ds1302/ds1302.c:211:6:parse_time	24	static

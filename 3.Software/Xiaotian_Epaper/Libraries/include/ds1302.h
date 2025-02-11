@@ -4,6 +4,10 @@
 #include "main.h"
 #include <stdio.h>
 
+// 使用编译时的宏 __DATE__ 和 __TIME__ 提取编译时间
+#define COMPILE_DATE __DATE__
+#define COMPILE_TIME __TIME__
+
 
 #define CE_L HAL_GPIO_WritePin(DS1302_CE_GPIO_Port,DS1302_CE_Pin,0)
 #define CE_H HAL_GPIO_WritePin(DS1302_CE_GPIO_Port,DS1302_CE_Pin,1)
@@ -33,7 +37,9 @@ void ds1032_DATAINPUT_init();//IO端口配置为输入
 void ds1032_read_time();//从ds1302读取实时时间（BCD码）
 void ds1032_read_realTime();//将BCD码转化为十进制数据
 uint8_t int_to_bcd(int num);
-
+uint8_t month_str_to_num(const char* month);
+void parse_date(const char* date_str, int* day, int* month, int* year);
+void parse_time(const char* time_str, int* hour, int* min, int* sec);
 
 extern volatile TIMEData Time_now;//全局变量
 
