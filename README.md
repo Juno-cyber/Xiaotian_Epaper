@@ -12,7 +12,7 @@
 
 
 
-**<font color='RedOrange'>完整资料：</font>** **已上传**github-[Xiaotian_Epaper](https://github.com/Juno-cyber/Xiaotian_Epaper)，gitee-[Xiaotian_Epaper](https://gitee.com/Juno-cyber/Xiaotian_Epaper)，oshwhub-[电路设计](https://oshwhub.com/juno_eda/xiaoshi_epaper)
+**<font color='RedOrange'>完整资料：</font>** **已上传**github-[Xiaotian_Epaper](https://github.com/Juno-cyber/Xiaotian_Epaper)，gitee-[Xiaotian_Epaper](https://gitee.com/Juno-cyber/Xiaotian_Epaper)，oshwhub-[电路设计](https://oshwhub.com/juno_eda/xiaoshi_epaper)，b站[视频](https://www.bilibili.com/video/BV1hEdBY6EPM/?share_source=copy_web&vd_source=f2a8121979bd65e030be046aad20de2c)
 
 **<font color='RedOrange'>更新日志：</font>** 
 
@@ -116,7 +116,7 @@
 
 ![keyshot.8](README.assets/keyshot.8.jpg)
 
-安装需要准备9以下零件，选购链接已经在BOM表`Xiaotian_Epaper\1.Hadware\BOM清单2024-12-14.xlsx`中给出
+安装需要准备以下零件，选购链接已经在BOM表`Xiaotian_Epaper\1.Hadware\BOM清单2024-12-14.xlsx`中给出
 
 ![2月12日](README.assets/2月12日.png)
 
