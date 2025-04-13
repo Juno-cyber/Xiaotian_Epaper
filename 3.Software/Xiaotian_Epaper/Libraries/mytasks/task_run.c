@@ -178,7 +178,7 @@ void update_run()
 			vc02_msg = 0;
 			break;
 		case 14:				//时间时加一
-			if(temp_time.hour>=0&&temp_time.hour<24)
+			if(temp_time.hour>=0&&temp_time.hour<23)
 			{
 				temp_time.hour += 1;
 				osEventFlagsSet(Event_01Handle, 0x01<<0);
@@ -186,7 +186,7 @@ void update_run()
 			vc02_msg = 0;
 			break;
 		case 15:				//时间时减一
-			if(temp_time.hour>0&&temp_time.hour<=24)
+			if(temp_time.hour>0&&temp_time.hour<=23)
 			{
 				temp_time.hour -= 1;
 				osEventFlagsSet(Event_01Handle, 0x01<<0);

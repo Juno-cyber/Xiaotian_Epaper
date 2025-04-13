@@ -1,6 +1,6 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.17 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.17">
   <diagram name="Page-1" id="c7558073-3199-34d8-9f00-42111426c3f3">
-    <mxGraphModel dx="2231" dy="1299" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="826" pageHeight="1169" background="none" math="0" shadow="0">
+    <mxGraphModel dx="2128" dy="758" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="826" pageHeight="1169" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -35,7 +35,7 @@
         </mxCell>
         <mxCell id="KYCBICbOke3TSxatJTsc-105" value="" style="swimlane;startSize=0;fillColor=none;dashed=1;strokeWidth=2;fontFamily=Times New Roman;" parent="1" vertex="1">
           <mxGeometry x="80" y="310" width="140" height="240" as="geometry">
-            <mxRectangle x="100" y="460" width="50" height="40" as="alternateBounds" />
+            <mxRectangle x="80" y="310" width="50" height="40" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="SlOrQcs6TzMa83nHez-D-3" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#BD7000;strokeWidth=2;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;fillColor=#f0a30a;" parent="KYCBICbOke3TSxatJTsc-105" source="KYCBICbOke3TSxatJTsc-100" target="SlOrQcs6TzMa83nHez-D-1" edge="1">
@@ -63,7 +63,7 @@
         </mxCell>
         <mxCell id="KYCBICbOke3TSxatJTsc-111" value="" style="swimlane;startSize=0;fillColor=none;dashed=1;strokeWidth=2;fontFamily=Times New Roman;" parent="1" vertex="1">
           <mxGeometry x="260" y="310" width="150" height="240" as="geometry">
-            <mxRectangle x="100" y="460" width="50" height="40" as="alternateBounds" />
+            <mxRectangle x="260" y="310" width="50" height="40" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="KYCBICbOke3TSxatJTsc-112" value="关键值打印显示&#xa;LED灯闪烁显示" style="whiteSpace=wrap;align=center;verticalAlign=middle;fontStyle=1;strokeWidth=2;fillColor=#FFFFCC;fontFamily=Times New Roman;" parent="KYCBICbOke3TSxatJTsc-111" vertex="1">
@@ -80,7 +80,7 @@
         </mxCell>
         <mxCell id="KYCBICbOke3TSxatJTsc-117" value="" style="swimlane;startSize=0;fillColor=none;dashed=1;strokeWidth=2;fontFamily=Times New Roman;" parent="1" vertex="1">
           <mxGeometry x="440" y="310" width="180" height="450" as="geometry">
-            <mxRectangle x="100" y="460" width="50" height="40" as="alternateBounds" />
+            <mxRectangle x="440" y="310" width="50" height="40" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="KYCBICbOke3TSxatJTsc-119" value="task_run=3" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="KYCBICbOke3TSxatJTsc-117" vertex="1">
@@ -145,7 +145,7 @@
         </mxCell>
         <mxCell id="KYCBICbOke3TSxatJTsc-120" value="" style="swimlane;startSize=0;fillColor=none;dashed=1;strokeWidth=2;fontFamily=Times New Roman;" parent="1" vertex="1">
           <mxGeometry x="660" y="310" width="140" height="420" as="geometry">
-            <mxRectangle x="100" y="460" width="50" height="40" as="alternateBounds" />
+            <mxRectangle x="660" y="310" width="50" height="40" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="KYCBICbOke3TSxatJTsc-121" value="串口接收vc02指令后更新控制变量值" style="whiteSpace=wrap;align=center;verticalAlign=middle;fontStyle=1;strokeWidth=2;fillColor=#FFFFCC;fontFamily=Times New Roman;" parent="KYCBICbOke3TSxatJTsc-120" vertex="1">
@@ -191,7 +191,7 @@
             <mxPoint x="-9" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="FDbFjoVgWYvQYMH4IWsY-19" value="0停留等待事件组Event_02" style="whiteSpace=wrap;align=center;verticalAlign=middle;fontStyle=1;strokeWidth=2;fillColor=#FFFFCC;fontFamily=Times New Roman;" parent="KYCBICbOke3TSxatJTsc-120" vertex="1">
+        <mxCell id="FDbFjoVgWYvQYMH4IWsY-19" value="停留等待事件组Event_02" style="whiteSpace=wrap;align=center;verticalAlign=middle;fontStyle=1;strokeWidth=2;fillColor=#FFFFCC;fontFamily=Times New Roman;" parent="KYCBICbOke3TSxatJTsc-120" vertex="1">
           <mxGeometry x="14.5" y="185" width="111" height="50" as="geometry" />
         </mxCell>
         <mxCell id="FDbFjoVgWYvQYMH4IWsY-20" value="更新时钟芯片时间" style="whiteSpace=wrap;align=center;verticalAlign=middle;fontStyle=1;strokeWidth=2;fillColor=#FFFFCC;fontFamily=Times New Roman;" parent="KYCBICbOke3TSxatJTsc-120" vertex="1">
@@ -265,6 +265,12 @@
         </mxCell>
         <mxCell id="FDbFjoVgWYvQYMH4IWsY-51" value="事件组流" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;fontStyle=1" parent="1" vertex="1">
           <mxGeometry x="660" y="145" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ffH4pfn04Z22Nr6gKTYO-2" value="&amp;nbsp;" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="880" y="105" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ffH4pfn04Z22Nr6gKTYO-3" value="&amp;nbsp;" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="-110" y="135" width="60" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
