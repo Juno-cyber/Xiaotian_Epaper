@@ -77,6 +77,25 @@ void init_show(){
 	EPD_ALL_image(gImage1_white,gImage1_xiaowu);
 #endif
 //
+#ifdef scene4
+#ifdef black_white_red
+	EPD_WhiteScreen_Black();
+#else
+	EPD_WhiteScreen_White();
+#endif
+	EPD_W21_Init();
+	//white
+	EPD_Dis_Part(0, 0, gImage1_white, 296, 128, NEG);
+	//	left
+	EPD_Dis_Part(0, 0, qiegewala, 296, 128, POS);
+	//right
+	EPD_Dis_string(166, 0, time, 32, NEG);
+	EPD_Dis_string(180, 32, date, 16, NEG);
+	EPD_Dis_Part(190, 48, gImage_feizhou, 32, 32, POS);
+	EPD_Dis_string(190 + 32, 56, itoa(date_diff(Time_start, Time_now),temp_itoa,10), 16, NEG);
+	EPD_Dis_Part(190, 80, gImage_sport, 32, 32, POS);
+	EPD_Dis_string(190 + 32, 88, itoa(date_diff(Time_haidilao, Time_now),temp_itoa,10), 16, NEG);
+#endif
 	EPD_Part_Update_and_DeepSleep();
 }
 
@@ -123,6 +142,20 @@ void update_show()
 
 #ifdef scene3
 
+#endif
+
+#ifdef scene4
+	//white
+	EPD_Dis_Part(0, 0, gImage1_white, 296, 128, NEG);
+	//	left
+	EPD_Dis_Part(0, 0, qiegewala, 296, 128, POS);
+	//right
+	EPD_Dis_string(166, 0, time, 32, NEG);
+	EPD_Dis_string(180, 32, date, 16, NEG);
+	EPD_Dis_Part(190, 48, gImage_feizhou, 32, 32, POS);
+	EPD_Dis_string(190 + 32, 56, itoa(date_diff(Time_start, Time_now),temp_itoa,10), 16, NEG);
+	EPD_Dis_Part(190, 80, gImage_sport, 32, 32, POS);
+	EPD_Dis_string(190 + 32, 88, itoa(date_diff(Time_haidilao, Time_now),temp_itoa,10), 16, NEG);
 #endif
 	EPD_Part_Update_and_DeepSleep();
 }

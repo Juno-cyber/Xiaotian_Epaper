@@ -16,6 +16,7 @@
 #define scene1						//显示场景1
 //#define scene2						//显示场景2
 //#define scene3						//显示场景3
+//#define scene4
 
 typedef enum { false, true } bool; // 自定义bool类型和常量
 

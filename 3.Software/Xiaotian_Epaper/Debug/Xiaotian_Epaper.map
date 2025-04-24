@@ -2826,6 +2826,12 @@ Discarded input sections
  .bss           0x00000000        0x0 ./Libraries/EPD_W21/EPAPER.o
  .rodata.gImage_huoguo
                 0x00000000       0x80 ./Libraries/EPD_W21/EPAPER.o
+ .rodata.gImage_feizhou
+                0x00000000       0x80 ./Libraries/EPD_W21/EPAPER.o
+ .rodata.gImage_sport
+                0x00000000       0x80 ./Libraries/EPD_W21/EPAPER.o
+ .rodata.qiegewala
+                0x00000000     0x1280 ./Libraries/EPD_W21/EPAPER.o
  .rodata.photo2
                 0x00000000      0x6e0 ./Libraries/EPD_W21/EPAPER.o
  .rodata.photo3
@@ -7016,7 +7022,7 @@ LOAD D:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
 LOAD D:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libm.a
 LOAD D:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.0.200.202406191623/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7-m/nofp\libgcc.a
 
-.debug_info     0x00000000    0x1b59c
+.debug_info     0x00000000    0x1b5e1
  .debug_info    0x00000000      0x808 ./Core/Src/freertos.o
  .debug_info    0x00000808      0x2d3 ./Core/Src/gpio.o
  .debug_info    0x00000adb      0xb75 ./Core/Src/main.o
@@ -7036,21 +7042,21 @@ LOAD D:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .debug_info    0x00006635     0x293b ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o
  .debug_info    0x00008f70     0x149b ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o
  .debug_info    0x0000a40b     0x2fa8 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o
- .debug_info    0x0000d3b3      0xda5 ./Libraries/EPD_W21/EPAPER.o
- .debug_info    0x0000e158      0x726 ./Libraries/ds1302/ds1302.o
- .debug_info    0x0000e87e      0x662 ./Libraries/mytasks/task_init.o
- .debug_info    0x0000eee0      0x338 ./Libraries/mytasks/task_read.o
- .debug_info    0x0000f218      0x5a3 ./Libraries/mytasks/task_run.o
- .debug_info    0x0000f7bb      0x418 ./Libraries/mytasks/task_show.o
- .debug_info    0x0000fbd3      0x5c3 ./Libraries/myusart/myusart.o
- .debug_info    0x00010196     0x4059 ./Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.o
- .debug_info    0x000141ef      0xbb8 ./Middlewares/Third_Party/FreeRTOS/Source/event_groups.o
- .debug_info    0x00014da7      0x2aa ./Middlewares/Third_Party/FreeRTOS/Source/list.o
- .debug_info    0x00015051     0x1abf ./Middlewares/Third_Party/FreeRTOS/Source/queue.o
- .debug_info    0x00016b10     0x27b8 ./Middlewares/Third_Party/FreeRTOS/Source/tasks.o
- .debug_info    0x000192c8     0x1a7d ./Middlewares/Third_Party/FreeRTOS/Source/timers.o
- .debug_info    0x0001ad45      0x494 ./Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.o
- .debug_info    0x0001b1d9      0x3c3 ./Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.o
+ .debug_info    0x0000d3b3      0xdea ./Libraries/EPD_W21/EPAPER.o
+ .debug_info    0x0000e19d      0x726 ./Libraries/ds1302/ds1302.o
+ .debug_info    0x0000e8c3      0x662 ./Libraries/mytasks/task_init.o
+ .debug_info    0x0000ef25      0x338 ./Libraries/mytasks/task_read.o
+ .debug_info    0x0000f25d      0x5a3 ./Libraries/mytasks/task_run.o
+ .debug_info    0x0000f800      0x418 ./Libraries/mytasks/task_show.o
+ .debug_info    0x0000fc18      0x5c3 ./Libraries/myusart/myusart.o
+ .debug_info    0x000101db     0x4059 ./Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.o
+ .debug_info    0x00014234      0xbb8 ./Middlewares/Third_Party/FreeRTOS/Source/event_groups.o
+ .debug_info    0x00014dec      0x2aa ./Middlewares/Third_Party/FreeRTOS/Source/list.o
+ .debug_info    0x00015096     0x1abf ./Middlewares/Third_Party/FreeRTOS/Source/queue.o
+ .debug_info    0x00016b55     0x27b8 ./Middlewares/Third_Party/FreeRTOS/Source/tasks.o
+ .debug_info    0x0001930d     0x1a7d ./Middlewares/Third_Party/FreeRTOS/Source/timers.o
+ .debug_info    0x0001ad8a      0x494 ./Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.o
+ .debug_info    0x0001b21e      0x3c3 ./Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.o
 
 .debug_abbrev   0x00000000     0x489d
  .debug_abbrev  0x00000000      0x1eb ./Core/Src/freertos.o
@@ -7416,7 +7422,7 @@ LOAD D:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .debug_line    0x0001d670      0x90f ./Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.o
  .debug_line    0x0001df7f      0x965 ./Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.o
 
-.debug_str      0x00000000    0x973fd
+.debug_str      0x00000000    0x97423
  .debug_str     0x00000000    0x8bd3d ./Core/Src/freertos.o
                               0x8c124 (size before relaxing)
  .debug_str     0x0008bd3d      0x10a ./Core/Src/gpio.o
@@ -7455,35 +7461,35 @@ LOAD D:/ST/STM32CubeIDE_1.16.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
                               0x842d6 (size before relaxing)
  .debug_str     0x00090bf4      0x5f0 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.o
                               0x84139 (size before relaxing)
- .debug_str     0x000911e4      0x56b ./Libraries/EPD_W21/EPAPER.o
-                              0x87832 (size before relaxing)
- .debug_str     0x0009174f      0x198 ./Libraries/ds1302/ds1302.o
+ .debug_str     0x000911e4      0x591 ./Libraries/EPD_W21/EPAPER.o
+                              0x87858 (size before relaxing)
+ .debug_str     0x00091775      0x198 ./Libraries/ds1302/ds1302.o
                               0x87329 (size before relaxing)
- .debug_str     0x000918e7       0x4d ./Libraries/mytasks/task_init.o
+ .debug_str     0x0009190d       0x4d ./Libraries/mytasks/task_init.o
                               0x8be3f (size before relaxing)
- .debug_str     0x00091934       0x75 ./Libraries/mytasks/task_read.o
+ .debug_str     0x0009195a       0x75 ./Libraries/mytasks/task_read.o
                               0x8bac3 (size before relaxing)
- .debug_str     0x000919a9      0x12c ./Libraries/mytasks/task_run.o
+ .debug_str     0x000919cf      0x12c ./Libraries/mytasks/task_run.o
                               0x8bbd6 (size before relaxing)
- .debug_str     0x00091ad5       0x21 ./Libraries/mytasks/task_show.o
+ .debug_str     0x00091afb       0x21 ./Libraries/mytasks/task_show.o
                               0x8bb7f (size before relaxing)
- .debug_str     0x00091af6       0x1f ./Libraries/myusart/myusart.o
+ .debug_str     0x00091b1c       0x1f ./Libraries/myusart/myusart.o
                               0x8bd96 (size before relaxing)
- .debug_str     0x00091b15     0x2e11 ./Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.o
+ .debug_str     0x00091b3b     0x2e11 ./Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.o
                                0xe906 (size before relaxing)
- .debug_str     0x00094926      0x49b ./Middlewares/Third_Party/FreeRTOS/Source/event_groups.o
+ .debug_str     0x0009494c      0x49b ./Middlewares/Third_Party/FreeRTOS/Source/event_groups.o
                                0xbaa3 (size before relaxing)
- .debug_str     0x00094dc1       0xaf ./Middlewares/Third_Party/FreeRTOS/Source/list.o
+ .debug_str     0x00094de7       0xaf ./Middlewares/Third_Party/FreeRTOS/Source/list.o
                                0xa6d4 (size before relaxing)
- .debug_str     0x00094e70      0x7a5 ./Middlewares/Third_Party/FreeRTOS/Source/queue.o
+ .debug_str     0x00094e96      0x7a5 ./Middlewares/Third_Party/FreeRTOS/Source/queue.o
                                0xc0ce (size before relaxing)
- .debug_str     0x00095615     0x105a ./Middlewares/Third_Party/FreeRTOS/Source/tasks.o
+ .debug_str     0x0009563b     0x105a ./Middlewares/Third_Party/FreeRTOS/Source/tasks.o
                                0xcf7a (size before relaxing)
- .debug_str     0x0009666f      0x4e6 ./Middlewares/Third_Party/FreeRTOS/Source/timers.o
+ .debug_str     0x00096695      0x4e6 ./Middlewares/Third_Party/FreeRTOS/Source/timers.o
                                0xc8c2 (size before relaxing)
- .debug_str     0x00096b55      0x66e ./Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.o
+ .debug_str     0x00096b7b      0x66e ./Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.o
                                0x9ca3 (size before relaxing)
- .debug_str     0x000971c3      0x23a ./Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.o
+ .debug_str     0x000971e9      0x23a ./Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.o
                                0xae21 (size before relaxing)
 
 .comment        0x00000000       0x43

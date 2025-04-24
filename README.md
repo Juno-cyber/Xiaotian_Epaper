@@ -8,7 +8,7 @@
 
 **组成：** 墨水屏、stm32、vc02语音模块、实时时钟
 
-**使用软件：** cubeide1.16.1、lceda专业版、solidworks2024、keyshot13
+**使用软件：** cubeide1.16.1、lceda专业版、solidworks2024、keyshot2024
 
 
 
