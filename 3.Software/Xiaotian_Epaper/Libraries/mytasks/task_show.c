@@ -2,12 +2,10 @@
 
 void show() {
 	osSemaphoreAcquire(Binary_Sem_1Handle, osWaitForever);
-	printf("time:%d-%d-%d, %d:%d:%d \n",Time_now.year,Time_now.month,Time_now.day,Time_now.hour,Time_now.minute,Time_now.second);
+	printf("当前时间:%d-%d-%d, %d:%d:%d \n",Time_now.year,Time_now.month,Time_now.day,Time_now.hour,Time_now.minute,Time_now.second);
 //	HAL_GPIO_WritePin(IO_LED_GPIO_Port, IO_LED_Pin,
 //			!HAL_GPIO_ReadPin(IO_LED_GPIO_Port, IO_LED_Pin));	//LED=0 亮
-	printf("vc02:%d\n",vc02_msg);
-    printf("COMPILE_DATE:%s ,COMPILE_TIME:%s \n",COMPILE_DATE,COMPILE_TIME);
-
+//	printf("vc02:%d\n",vc02_msg);
 	osDelay(200);
 }
 

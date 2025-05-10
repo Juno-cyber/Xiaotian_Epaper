@@ -5,11 +5,11 @@ TIMEData Time_start = {2023,6,18,12,0,0,7};					//正向计时事件，恋爱开始时间
 TIMEData Time_haidilao;										//正向计时事件，海底捞冷却时间
 TIMEData event_power[4];									//倒计时事件
 char temp_itoa[6];											//用作数值转字符串的暂存数组
-uint16_t temp_year=0;
-uint8_t temp_month=0;
-uint8_t temp_day=0;
-uint8_t temp_hour=0;
-uint8_t temp_minite=0;
+volatile uint16_t temp_year=0;
+volatile uint8_t temp_month=0;
+volatile uint8_t temp_day=0;
+volatile uint8_t temp_hour=0;
+volatile uint8_t temp_minite=0;
 
 void run() {
 	update_run();
@@ -73,7 +73,6 @@ int date_diff(TIMEData time1,TIMEData time2) {
 	else {
 		return 0;
 	}
-
 }
 
 void update_time()
@@ -215,6 +214,8 @@ void update_run()
 		default:
 			break;
 	}
+//	printf("temp_time:%d-%d-%d,%d:%d \n",temp_year,temp_month,temp_day,temp_hour,temp_minite);
+//	printf("time_now: %d-%d-%d,%d:%d \n",Time_now.year,Time_now.month,Time_now.day,Time_now.hour,Time_now.minute);
 	if((temp_year != Time_now.year)||(temp_month != Time_now.month)||(temp_day != Time_now.day)||(temp_hour != Time_now.hour)||(temp_minite != Time_now.minute))
 	{
 		temp_year=Time_now.year;
@@ -224,19 +225,19 @@ void update_run()
 		temp_minite=Time_now.minute;
 		temp_time = Time_now;
 		osEventFlagsSet(Event_02Handle, 1<<0);
-		printf("更新显示！\n");
+//		printf("更新显示！\n");
 	}
 	temp_event = osEventFlagsWait(Event_02Handle, 1<<0, osFlagsWaitAny, 0);	//等待显示事件位
 	if(((temp_event&(1<<0))==(1<<0))&&((int)temp_event>0))
 	{
-		printf("Event_02 time:%d-%d-%d, %d:%d:%d \n",Time_now.year,Time_now.month,Time_now.day,Time_now.hour,Time_now.minute,Time_now.second);
+		printf("时间自动更新Event_02:%d-%d-%d, %d:%d \n",Time_now.year,Time_now.month,Time_now.day,Time_now.hour,Time_now.minute);
 		update_show();
 	}
-
 }
 
 void init_run()
 {
+    printf("COMPILE_DATE:%s ,COMPILE_TIME:%s \n",COMPILE_DATE,COMPILE_TIME);
 	while(Time_now.year==0)						//如果没有读到值就一直读
 	{
 		ds1032_read_realTime();
