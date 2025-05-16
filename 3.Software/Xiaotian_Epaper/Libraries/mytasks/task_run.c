@@ -54,6 +54,29 @@ uint16_t daysFromBase(uint16_t year, uint16_t month, uint16_t day) {
     return days;
 }
 
+// 计算从1970年1月1日到给定时间的总分钟数
+uint16_t time_to_minutes(int year, int month, int day, int hour, int minute) {
+	uint16_t total_days = 0;
+
+    // 计算从1970年到(year-1)的总天数
+    for (int y = 1970; y < year; y++) {
+        total_days += isLeapYear(y) ? 366 : 365;
+    }
+
+    // 计算当前年的月份天数
+    for (int m = 1; m < month; m++) {
+        total_days += daysInMonth(year, m);
+    }
+
+    // 加上当前月的天数
+    total_days += day - 1;
+
+    // 转换为分钟
+    uint16_t total_minutes = total_days * 24 * 60 + hour * 60 + minute;
+
+    return total_minutes;
+}
+
 // 计算两个日期之间的天数差
 int date_diff(TIMEData time1,TIMEData time2) {
 	if(time1.year!=0&&time2.year!=0)
@@ -73,6 +96,17 @@ int date_diff(TIMEData time1,TIMEData time2) {
 	else {
 		return 0;
 	}
+}
+
+// 计算两个时间的分钟差（编译时间放在前面，当前时间放在后面）
+int time_diff_minutes(
+    int year1, int month1, int day1, int hour1, int minute1,
+    int year2, int month2, int day2, int hour2, int minute2
+) {
+	int t1 = time_to_minutes(year1, month1, day1, hour1, minute1);
+	int t2 = time_to_minutes(year2, month2, day2, hour2, minute2);
+
+	return t1 - t2;
 }
 
 void update_time()
@@ -214,8 +248,8 @@ void update_run()
 		default:
 			break;
 	}
-//	printf("temp_time:%d-%d-%d,%d:%d \n",temp_year,temp_month,temp_day,temp_hour,temp_minite);
-//	printf("time_now: %d-%d-%d,%d:%d \n",Time_now.year,Time_now.month,Time_now.day,Time_now.hour,Time_now.minute);
+//	printf("临时时间:%d-%d-%d,%d:%d \n",temp_year,temp_month,temp_day,temp_hour,temp_minite);
+//	printf("现在计时: %d-%d-%d,%d:%d \n",Time_now.year,Time_now.month,Time_now.day,Time_now.hour,Time_now.minute);
 	if((temp_year != Time_now.year)||(temp_month != Time_now.month)||(temp_day != Time_now.day)||(temp_hour != Time_now.hour)||(temp_minite != Time_now.minute))
 	{
 		temp_year=Time_now.year;
@@ -227,6 +261,13 @@ void update_run()
 		osEventFlagsSet(Event_02Handle, 1<<0);
 //		printf("更新显示！\n");
 	}
+//	时间超范围补丁
+	if(Time_now.second>=60||Time_now.second<0)
+	{
+		temp_time.second = 0;
+		osEventFlagsSet(Event_01Handle, 0x01<<0);
+		printf("错误：时间秒超出计数范围!\n");
+	}
 	temp_event = osEventFlagsWait(Event_02Handle, 1<<0, osFlagsWaitAny, 0);	//等待显示事件位
 	if(((temp_event&(1<<0))==(1<<0))&&((int)temp_event>0))
 	{
@@ -237,11 +278,12 @@ void update_run()
 
 void init_run()
 {
-    printf("COMPILE_DATE:%s ,COMPILE_TIME:%s \n",COMPILE_DATE,COMPILE_TIME);
+    printf("程序编译日期:%s ,程序编译时间:%s \n",COMPILE_DATE,COMPILE_TIME);
 	while(Time_now.year==0)						//如果没有读到值就一直读
 	{
 		ds1032_read_realTime();
 	}
+	printf("当前时间:%d-%d-%d, %d:%d:%d \n",Time_now.year,Time_now.month,Time_now.day,Time_now.hour,Time_now.minute,Time_now.second);
 	update_time();
 	temp_time = Time_now;
 	//正向计时事件

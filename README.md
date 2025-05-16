@@ -12,10 +12,13 @@
 
 
 
-**<font color='RedOrange'>完整资料：</font>** **已上传**github-[Xiaotian_Epaper](https://github.com/Juno-cyber/Xiaotian_Epaper)，gitee-[Xiaotian_Epaper](https://gitee.com/Juno-cyber/Xiaotian_Epaper)，oshwhub-[电路设计](https://oshwhub.com/juno_eda/xiaoshi_epaper)，b站[视频](https://www.bilibili.com/video/BV1hEdBY6EPM/?share_source=copy_web&vd_source=f2a8121979bd65e030be046aad20de2c)
+**<font color='RedOrange'>完整资料：</font>** **已上传**github-[Xiaotian_Epaper](https://github.com/Juno-cyber/Xiaotian_Epaper)，gitee-[Xiaotian_Epaper](https://gitee.com/Juno-cyber/Xiaotian_Epaper)，oshwhub-[电路设计](https://oshwhub.com/juno_eda/xiaoshi_epaper)
+
+**<font color='RedOrange'>视频：</font>**[[开源]墨水屏桌面备忘录！](https://www.bilibili.com/video/BV1hEdBY6EPM/?vd_source=bac4ee29cb575aa9bf0947bee030705f)
 
 **<font color='RedOrange'>更新日志：</font>** 
 
+1. 2025.5.16：解决了偶然出现的秒计时超出60导致计时停止问题，优化了时间自动更新（若编译时间超前当前时间或当前时间大于编译时间20年则更新为编译时间）
 1. 2025.4.13：添加scene3红黑显示demo，为”时间时加一“添加边界限制；更新了3D结构文件，删除了需要内嵌螺母的我外壳版本；pcb完善了丝印；
 1. 2025.2.11：首次烧录时根据系统编译时间自动更新时钟芯片时间
 1. 2025.1.18：更新bom表中黑白红墨水屏器件链接，更新程序，添加二次开发教程

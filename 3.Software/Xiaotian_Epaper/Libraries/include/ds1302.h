@@ -40,8 +40,12 @@ uint8_t int_to_bcd(int num);
 uint8_t month_str_to_num(const char* month);
 void parse_date(const char* date_str, int* day, int* month, int* year);
 void parse_time(const char* time_str, int* hour, int* min, int* sec);
+int time_diff_minutes(
+    int year1, int month1, int day1, int hour1, int minute1,
+    int year2, int month2, int day2, int hour2, int minute2
+);
 
 extern volatile TIMEData Time_now;//全局变量
-
+extern int temp_diff_min;
 
 #endif

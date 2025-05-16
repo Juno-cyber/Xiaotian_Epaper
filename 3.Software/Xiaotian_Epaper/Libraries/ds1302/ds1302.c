@@ -1,6 +1,7 @@
 #include "ds1302.h"
 volatile TIMEData Time_now;
 uint8_t read_time[7];
+int temp_diff_min;
 
 void ds1032_DATAOUT_init() //配置双向I/O端口为输出态
 {
@@ -100,7 +101,11 @@ void ds1032_init() {
     int hour, min, sec;
     parse_time(COMPILE_TIME, &hour, &min, &sec);
 
-    if(Time_now.year==2000||Time_now.minute==0){
+    temp_diff_min=time_diff_minutes(
+    		year, month, day, hour, min,(int)Time_now.year, (int)Time_now.month, (int)Time_now.day,(int)Time_now.hour, (int)Time_now.minute
+    );
+    if((temp_diff_min>0)||((Time_now.year-year)>20)){
+    	printf("按照编译时间更新时间\n");
     	//更新Time_now
     	Time_now.second = sec;
     	Time_now.minute = min;

@@ -54,7 +54,7 @@ void init_show(){
 	//white
 	EPD_Dis_Part(0, 0, gImage1_white, 296, 128, NEG);
 	//	left
-	EPD_Dis_Part(0, 0, gImage1_xiaowu, 296, 128, POS);
+	EPD_Dis_Part(0, 0, gImage1_leju, 296, 128, POS);
 	//right
 	EPD_Dis_string(166, 0, time, 32, NEG);
 	EPD_Dis_string(180, 32, date, 16, NEG);
@@ -128,7 +128,7 @@ void update_show()
 	//white
 	EPD_Dis_Part(0, 0, gImage1_white, 296, 128, NEG);
 	//	left
-	EPD_Dis_Part(0, 0, gImage1_xiaowu, 296, 128, POS);
+	EPD_Dis_Part(0, 0, gImage1_leju, 296, 128, POS);
 	//right
 	EPD_Dis_string(166, 0, time, 32, NEG);
 	EPD_Dis_string(180, 32, date, 16, NEG);

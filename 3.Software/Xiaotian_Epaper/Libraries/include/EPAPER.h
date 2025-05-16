@@ -14,8 +14,8 @@
 
 #define ALLSCREEN_GRAGHBYTES	EPD_WIDTH*EPD_HEIGHT/8
 //选择屏幕类型，共适配了两种类型的显示屏，bom表中有列出链接，可以根据自己选择来做选择
-#define black_white_red	//使用黑白红墨水屏
-//#define black_white			//使用黑白墨水屏
+//#define black_white_red	//使用黑白红墨水屏
+#define black_white			//使用黑白墨水屏
 
 ///////////////////////////GPIO Settings//////////////////////////////////////////////////////
 
@@ -115,6 +115,7 @@ extern const unsigned char photo1[1760];
 extern const unsigned char photo2[1760];
 extern const unsigned char qiegewala[4736];
 extern const unsigned char photo3[2400];
+extern const unsigned char gImage1_leju[4736];
 extern const unsigned char gImage1_xiaowu[4736];
 extern const unsigned char gImage1_white[4736];
 
