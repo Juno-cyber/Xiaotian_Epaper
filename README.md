@@ -318,8 +318,7 @@ vc02的语音控制可以在[安信可平台](http://voice.ai-thinker.com/#/YzsM
 
 ## 常见问题
 
-1. cubeide中不能打印%lld，[配置cubeide](https://blog.csdn.net/xiaowenshen/article/details/120829001)
-2. 
+
 
 
 
