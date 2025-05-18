@@ -3,6 +3,7 @@
 
 #include "main.h"
 #include <stdio.h>
+#include <string.h>
 
 // 使用编译时的宏 __DATE__ 和 __TIME__ 提取编译时间
 #define COMPILE_DATE __DATE__
@@ -40,12 +41,12 @@ uint8_t int_to_bcd(int num);
 uint8_t month_str_to_num(const char* month);
 void parse_date(const char* date_str, int* day, int* month, int* year);
 void parse_time(const char* time_str, int* hour, int* min, int* sec);
-int time_diff_minutes(
+int64_t time_to_minutes(int year, int month, int day, int hour, int minute);
+int64_t time_diff_minutes(
     int year1, int month1, int day1, int hour1, int minute1,
     int year2, int month2, int day2, int hour2, int minute2
 );
 
 extern volatile TIMEData Time_now;//全局变量
-extern int temp_diff_min;
 
 #endif

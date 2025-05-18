@@ -54,29 +54,6 @@ uint16_t daysFromBase(uint16_t year, uint16_t month, uint16_t day) {
     return days;
 }
 
-// 计算从1970年1月1日到给定时间的总分钟数
-uint16_t time_to_minutes(int year, int month, int day, int hour, int minute) {
-	uint16_t total_days = 0;
-
-    // 计算从1970年到(year-1)的总天数
-    for (int y = 1970; y < year; y++) {
-        total_days += isLeapYear(y) ? 366 : 365;
-    }
-
-    // 计算当前年的月份天数
-    for (int m = 1; m < month; m++) {
-        total_days += daysInMonth(year, m);
-    }
-
-    // 加上当前月的天数
-    total_days += day - 1;
-
-    // 转换为分钟
-    uint16_t total_minutes = total_days * 24 * 60 + hour * 60 + minute;
-
-    return total_minutes;
-}
-
 // 计算两个日期之间的天数差
 int date_diff(TIMEData time1,TIMEData time2) {
 	if(time1.year!=0&&time2.year!=0)
@@ -98,14 +75,43 @@ int date_diff(TIMEData time1,TIMEData time2) {
 	}
 }
 
+// 计算从2025年1月1日到给定时间的总分钟数
+int64_t time_to_minutes(int year, int month, int day, int hour, int minute) {
+	int64_t total_days = 0;
+
+    // 计算从1970年到(year-1)的总天数
+    for (int y = 2000; y < year; y++) {
+        total_days += isLeapYear(y) ? 366 : 365;
+    }
+
+    // 计算当前年的月份天数
+    for (int m = 1; m < month; m++) {
+        total_days += daysInMonth(year, m);
+    }
+
+    // 加上当前月的天数
+    total_days += day - 1;
+
+    // 转换为分钟
+    int64_t total_minutes = total_days * 24 * 60 + hour * 60 + minute;
+
+    return total_minutes;
+}
+
 // 计算两个时间的分钟差（编译时间放在前面，当前时间放在后面）
-int time_diff_minutes(
+int64_t time_diff_minutes(
     int year1, int month1, int day1, int hour1, int minute1,
     int year2, int month2, int day2, int hour2, int minute2
 ) {
-	int t1 = time_to_minutes(year1, month1, day1, hour1, minute1);
-	int t2 = time_to_minutes(year2, month2, day2, hour2, minute2);
-
+	int64_t t1 = time_to_minutes(year1, month1, day1, hour1, minute1);
+	int64_t t2 = time_to_minutes(year2, month2, day2, hour2, minute2);
+	if(t1>t2)
+	{
+		printf("编译时间>当前时间，更新为编译时间\n");
+	}
+	else {
+		printf("编译时间<当前时间，保持当前时间\n");
+	}
 	return t1 - t2;
 }
 

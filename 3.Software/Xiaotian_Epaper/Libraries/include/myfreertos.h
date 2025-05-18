@@ -3,7 +3,6 @@
 
 #include "FreeRTOS.h"
 #include "task.h"
-#include "main.h"
 #include "cmsis_os.h"
 #include "cmsis_os2.h"
 #include <stdlib.h>
@@ -31,7 +30,6 @@ void run();
 bool isLeapYear(uint16_t year);
 uint16_t daysInMonth(uint16_t year, uint16_t month);
 uint16_t daysFromBase(uint16_t year, uint16_t month, uint16_t day);
-uint16_t time_to_minutes(int year, int month, int day, int hour, int minute);
 int date_diff(TIMEData time1,TIMEData time2);
 void update_time();
 void update_run();

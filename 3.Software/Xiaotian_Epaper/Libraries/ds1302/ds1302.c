@@ -1,7 +1,7 @@
 #include "ds1302.h"
 volatile TIMEData Time_now;
 uint8_t read_time[7];
-int temp_diff_min;
+int64_t temp_diff_min;
 
 void ds1032_DATAOUT_init() //配置双向I/O端口为输出态
 {

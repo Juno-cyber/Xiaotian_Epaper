@@ -9,6 +9,10 @@ Libraries/myusart/myusart.o: ../Libraries/myusart/myusart.c \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h \
+ ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h \
+ ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h \
+ ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h \
+ D:/Users/Administrator/Documents/GitHub/Xiaotian_Epaper/3.Software/Xiaotian_Epaper/Libraries/include/EPAPER.h \
  ../Core/Inc/main.h ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h \
  ../Core/Inc/stm32f1xx_hal_conf.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h \
@@ -34,10 +38,6 @@ Libraries/myusart/myusart.o: ../Libraries/myusart/myusart.c \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h \
- ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h \
- ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h \
- ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h \
- D:/Users/Administrator/Documents/GitHub/Xiaotian_Epaper/3.Software/Xiaotian_Epaper/Libraries/include/EPAPER.h \
  D:/Users/Administrator/Documents/GitHub/Xiaotian_Epaper/3.Software/Xiaotian_Epaper/Libraries/include/myusart.h \
  D:/Users/Administrator/Documents/GitHub/Xiaotian_Epaper/3.Software/Xiaotian_Epaper/Libraries/include/ds1302.h
 D:/Users/Administrator/Documents/GitHub/Xiaotian_Epaper/3.Software/Xiaotian_Epaper/Libraries/include/myfreertos.h:
@@ -50,6 +50,10 @@ D:/Users/Administrator/Documents/GitHub/Xiaotian_Epaper/3.Software/Xiaotian_Epap
 ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h:
 ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h:
 ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h:
+../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h:
+../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h:
+../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h:
+D:/Users/Administrator/Documents/GitHub/Xiaotian_Epaper/3.Software/Xiaotian_Epaper/Libraries/include/EPAPER.h:
 ../Core/Inc/main.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:
 ../Core/Inc/stm32f1xx_hal_conf.h:
@@ -76,9 +80,5 @@ D:/Users/Administrator/Documents/GitHub/Xiaotian_Epaper/3.Software/Xiaotian_Epap
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h:
-../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h:
-../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h:
-../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h:
-D:/Users/Administrator/Documents/GitHub/Xiaotian_Epaper/3.Software/Xiaotian_Epaper/Libraries/include/EPAPER.h:
 D:/Users/Administrator/Documents/GitHub/Xiaotian_Epaper/3.Software/Xiaotian_Epaper/Libraries/include/myusart.h:
 D:/Users/Administrator/Documents/GitHub/Xiaotian_Epaper/3.Software/Xiaotian_Epaper/Libraries/include/ds1302.h:

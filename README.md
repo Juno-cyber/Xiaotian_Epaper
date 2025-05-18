@@ -313,3 +313,21 @@ vc02的语音控制可以在[安信可平台](http://voice.ai-thinker.com/#/YzsM
 ## 最后
 
 难度不是很高的一个项目，想锻炼一下贴片焊接、学习stm32设计开发、freeRTOS的同学都可以来试试，我会持续完善更新，期待大家交作业！
+
+
+
+## 常见问题
+
+1. cubeide中不能打印%lld，[配置cubeide](https://blog.csdn.net/xiaowenshen/article/details/120829001)
+2. 
+
+
+
+
+
+
+
+
+
+
+

@@ -6,7 +6,7 @@ void show() {
 //	HAL_GPIO_WritePin(IO_LED_GPIO_Port, IO_LED_Pin,
 //			!HAL_GPIO_ReadPin(IO_LED_GPIO_Port, IO_LED_Pin));	//LED=0 ¡¡
 //	printf("vc02:%d\n",vc02_msg);
-	osDelay(200);
+	osDelay(1000);
 }
 
 void init_show(){
@@ -58,7 +58,7 @@ void init_show(){
 	//right
 	EPD_Dis_string(166, 0, time, 32, NEG);
 	EPD_Dis_string(180, 32, date, 16, NEG);
-	EPD_Dis_Part(190, 48, gImage_love, 32, 32, POS);
+	EPD_Dis_Part(190, 48, gImage_robot, 32, 32, POS);
 	EPD_Dis_string(190 + 32, 56, itoa(date_diff(Time_start, Time_now),temp_itoa,10), 16, NEG);
 	EPD_Dis_Part(190, 80, gImage_huoguo, 32, 32, POS);
 	EPD_Dis_string(190 + 32, 88, itoa(date_diff(Time_haidilao, Time_now),temp_itoa,10), 16, NEG);
@@ -132,7 +132,7 @@ void update_show()
 	//right
 	EPD_Dis_string(166, 0, time, 32, NEG);
 	EPD_Dis_string(180, 32, date, 16, NEG);
-	EPD_Dis_Part(190, 48, gImage_love, 32, 32, POS);
+	EPD_Dis_Part(190, 48, gImage_robot, 32, 32, POS);
 	EPD_Dis_string(190 + 32, 56, itoa(date_diff(Time_start, Time_now),temp_itoa,10), 16, NEG);
 	EPD_Dis_Part(190, 80, gImage_huoguo, 32, 32, POS);
 	EPD_Dis_string(190 + 32, 88, itoa(date_diff(Time_haidilao, Time_now),temp_itoa,10), 16, NEG);
