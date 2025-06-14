@@ -1,0 +1,5 @@
+Log file created at: 2025/05/27 00:08:00  PID: 26044
+Running on machine: STARDUST
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0527 00:08:00.414732 23572 code_page.cpp:268] in function[Unisound::OutputDebugPrintf], version: V1.0.1 
+ 

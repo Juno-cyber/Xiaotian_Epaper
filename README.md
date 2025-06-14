@@ -135,6 +135,10 @@
 
 ![b16dd6a19d504836f2a4427307bea4e](README.assets/b16dd6a19d504836f2a4427307bea4e.jpg)
 
+## 程序烧录
+
+**<font color='RedOrange'>参考视频：</font>**[[开源]墨水屏桌面备忘录！](https://www.bilibili.com/video/BV1hEdBY6EPM/?vd_source=bac4ee29cb575aa9bf0947bee030705f)
+
 ## 二次开发教程
 
 ### 不同墨水屏选择
@@ -266,9 +270,13 @@ vc02的语音控制可以在[安信可平台](http://voice.ai-thinker.com/#/YzsM
 
 **vc02烧录工具**：[教程参考](https://blog.csdn.net/Boantong_/article/details/123846788)
 
-工具路径：`xiaotian_Epaper\6.Tools\hummingbird-m-production-tool\UniOneDownloadTool.exe`
+专用下载工具路径（文件夹内有使用说明pdf）：`xiaotian_Epaper\6.Tools\hummingbird-m-production-tool\UniOneDownloadTool.exe`
+
+串口烧录工具（测试没下载成功）：`Xiaotian_Epaper\6.Tools\hummingbird-m-update-tool\UniOneUpdateTool.exe`
 
 固件路径：`xiaotian_Epaper\2.Firmware\uni_app_release.bin`
+
+**串口助手**：`Xiaotian_Epaper\6.Tools\sscom\sscom5.13.1.exe`
 
 ## 字模压缩
 
