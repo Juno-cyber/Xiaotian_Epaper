@@ -71,6 +71,10 @@
 
 ## 器件选型
 
+**完整的bom清单在github和gitee工程中**：`Xiaotian_Epaper\1.Hadware\BOM清单2024-12-14.xlsx`
+
+零件可在立创商城或者淘宝购买，哪里便宜在哪里买就好了
+
 **墨水屏[Epaper](https://item.taobao.com/item.htm?abbucket=20&id=520630517588&ns=1&pisk=g_cI30bxHMjQWFIi-HLafGQtyzPSO0OVAaa-o4CFyWFL2AgmVk8kKWk_Vcn_v68HK8ESxWeoLurUV7gocF-2gIun-72v0nRVUCjLESjR2JIzWCUUNydB_d8K-7VJ0N5J3IgnDvrwH6U8WFazzzBK2JeOBrrTJTBK2leTkrSLw7nJ55U7l9C8J6UTWzqOpzF8yl3Tuzsdp_CJ5VEgy7E-IK1_ypaxRFunZPNd6S3Lf_C-9Q2QciEgSPl_cJEYBl1-7faQdo3IT1HfiPhZ1-yNzLVtoAoL5SONpS3semMxqKWgO4HKqRiHjOZZBX082J_RiViE6qUsSMBLlWZQHXeGo10aeAG_TXKlnVu_v-NZQdxUUWiIno2pIhmS5ko-ORIBbukq7XesDh5sq8MmzziBO6nA4D54ckDFFNwcNPZ25F6lESmPtqQUVClupP4B0FT1xT2LSPZ25F6lEJUgRq865MXl.&priceTId=2147bfb017340128577698168e3e44&skuId=3863425440922&spm=a21n57.1.hoverItem.3&utparam=%7B%22aplus_abtest%22%3A%229007f57ddb131b74f319c38ba1bcda2a%22%7D&xxc=taobaoSearch)：**
 
 分辨率296x128像素 、2.9寸、黑白
