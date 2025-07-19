@@ -12,8 +12,8 @@
 
 #define RTX_BUFFER_SIZE 1
 // 可以参考定义自己的场景
-#define scene1						//显示场景1
-//#define scene2						//显示场景2
+//#define scene1						//显示场景1
+#define scene2						//显示场景2
 //#define scene3						//显示场景3
 //#define scene4
 

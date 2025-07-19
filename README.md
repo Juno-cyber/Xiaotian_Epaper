@@ -16,6 +16,8 @@
 
 **<font color='RedOrange'>视频：</font>**[[开源]墨水屏桌面备忘录！](https://www.bilibili.com/video/BV1hEdBY6EPM/?vd_source=bac4ee29cb575aa9bf0947bee030705f)
 
+**<font color='RedOrange'>BOM清单：</font>**`1.Hadware\BOM清单2024-12-14.xlsx`
+
 **<font color='RedOrange'>更新日志：</font>** 
 
 1. 2025.5.16：解决了偶然出现的秒计时超出60导致计时停止问题，优化了时间自动更新（若编译时间超前当前时间或当前时间大于编译时间20年则更新为编译时间）
@@ -32,16 +34,16 @@
 
 ![微信图片_20250413101005](README.assets/微信图片_20250413101005.jpg)
 
-| 序号 | 文件名       | 描述          |
-| ---- | ------------ | ------------- |
-| 1    | Hardware     | 硬件设计      |
-| 2    | Firmware     | 固件文件      |
-| 3    | Software     | 软件程序      |
-| 4    | CAD_Model    | 模型文件      |
-| 5    | Docs         | 文档          |
-| 6    | Tools        | 附带工具      |
-| 7    | img          | 输出图片      |
-| 8    | REDME.assets | REDME中的图片 |
+| 序号 | 文件名       | 描述              |
+| ---- | ------------ | ----------------- |
+| 1    | Hardware     | 硬件设计，BOM清单 |
+| 2    | Firmware     | 固件文件          |
+| 3    | Software     | 软件程序          |
+| 4    | CAD_Model    | 模型文件          |
+| 5    | Docs         | 文档              |
+| 6    | Tools        | 附带工具          |
+| 7    | img          | 输出图片          |
+| 8    | REDME.assets | REDME中的图片     |
 
 ## 控制指令
 
@@ -256,7 +258,7 @@ vc02的语音控制可以在[安信可平台](http://voice.ai-thinker.com/#/YzsM
 
 ## 工具使用
 
-**使用取模软件制作图片数组**
+**1.使用取模软件制作图片数组**
 
 首先了解2.9寸墨水屏显示尺寸为296*128，x方向可按1像素平移，**而y方向只能按8像素平移**（例如设置y=0，实际y=0；设置y=1~7，实际y=7）。以封面为例，主图大小为100x128px，所有小图标为32x32px，二次开发可参考该大小进行布局
 
@@ -272,7 +274,7 @@ vc02的语音控制可以在[安信可平台](http://voice.ai-thinker.com/#/YzsM
 
 ![图片取模2](README.assets/图片取模2.png)
 
-**vc02烧录工具**：[教程参考](https://blog.csdn.net/Boantong_/article/details/123846788)
+**2.vc02烧录工具**：[教程参考](https://blog.csdn.net/Boantong_/article/details/123846788)
 
 专用下载工具路径（文件夹内有使用说明pdf）：`xiaotian_Epaper\6.Tools\hummingbird-m-production-tool\UniOneDownloadTool.exe`
 
@@ -280,7 +282,7 @@ vc02的语音控制可以在[安信可平台](http://voice.ai-thinker.com/#/YzsM
 
 固件路径：`xiaotian_Epaper\2.Firmware\uni_app_release.bin`
 
-**串口助手**：`Xiaotian_Epaper\6.Tools\sscom\sscom5.13.1.exe`
+**3.串口助手**：`Xiaotian_Epaper\6.Tools\sscom\sscom5.13.1.exe`
 
 ## 字模压缩
 
